@@ -257,8 +257,8 @@
     //슬라이드 업데이트후 위치 옮기기
     swiper.updateSlides();
     swiper.slideTo(0, 100, false);
-    console.log('swiper.realIndex :', swiper.realIndex,'swiper.activeIndex :', swiper.activeIndex);
-    console.log('swiper.slides.length :', swiper.slides.length);
+    // console.log('swiper.realIndex :', swiper.realIndex,'swiper.activeIndex :', swiper.activeIndex);
+    // console.log('swiper.slides.length :', swiper.slides.length);
     //게시글 없음
     if(swiper.slides.length == 0) {
       noResult.css({display:'block'});
