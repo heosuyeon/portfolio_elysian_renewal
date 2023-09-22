@@ -224,6 +224,9 @@
   const noResult = newsListUl.find('.emptymessage');
 
   var swiper = new Swiper(".mySwiper", {
+    a11y:{
+      slideRole: 'listitem',
+    },
     slidesPerView: 2,
     spaceBetween: 20,
     allowTouchMove:false,
