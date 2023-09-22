@@ -73,7 +73,7 @@
   mainSlide.eq(0).fadeIn(); 
   //pager 생성
   mainSlide.each(function(idx){
-    pager.append(`<a href="">${idx}</a>`);
+    pager.append(`<a href="/index.html">${idx}</a>`);
   });
 
   //타이머
