@@ -371,7 +371,7 @@
 }
 .progress_wrap .short-cut:hover {
     color: #fff;
-    border-color: #009999;
+    border-color: var(--turquoise-color);
 }
 /*------------------이용요금------------------*/
 /*------------------슬로프안내------------------*/
@@ -515,7 +515,7 @@
     bottom: -10px;
     width: 100%;
     height: 3px;
-    background: #009999;
+    background: var(--turquoise-color);
 }
 .curriculum .progress dd span {
     font-weight: bold;
@@ -530,5 +530,5 @@
     height: 100%;
     left: 0;
     top: 0;
-    background: #009999;
+    background: var(--turquoise-color);
 }

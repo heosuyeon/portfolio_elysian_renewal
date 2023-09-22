@@ -307,7 +307,7 @@
         bottom: 0;
         width: 80%;
         height: 2px;
-        background-color: #009999;
+        background-color: var(--turquoise-color);
         transform: translateX(-50%) scaleX(0);
         transition: transform .2s;
     }
@@ -515,7 +515,7 @@
         color: #666;
     }
     .table li:hover strong {
-        color: #009999;
+        color: var(--turquoise-color);
     }
     .bg {
         display: none;

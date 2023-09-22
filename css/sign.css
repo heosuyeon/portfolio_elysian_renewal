@@ -14,14 +14,14 @@
     border-left-color: transparent;
 }
 #signin .tab_menu li.active {
-    border-color: #009999 #009999 transparent #009999;
+    border-color: var(--turquoise-color) var(--turquoise-color) transparent var(--turquoise-color);
 }
 #signin .tab_menu li a {
     display: block;
     padding: 15px 0;
 }
 #signin .tab_menu li.active a {
-    color:#009999;
+    color: var(--turquoise-color);
 }
 #signin .tab_contents {
     text-align: left;
@@ -71,7 +71,7 @@
     line-height: 60px;
     margin-top: 20px;
     border: none;
-    background: #009999;
+    background: var(--turquoise-color);
     color: #fff;
     font-size: 1.5rem;
 }
@@ -79,7 +79,7 @@
     text-decoration: underline;
 }
 #signin fieldset strong {
-    color: #009999;
+    color: var(--turquoise-color);
     font-weight: bold;
 }
 /* ---------------SIGNUP--------------- */
@@ -187,7 +187,7 @@
     width: 200px;
     height: 40px;
     border: none;
-    background-color: #009999;
+    background-color: var(--turquoise-color);
     color: #fff;
     padding: 0;
     display: block;

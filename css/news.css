@@ -19,7 +19,7 @@
 #news form button {
     height: 50px;
     padding: 0 30px;
-    background-color: #009999;
+    background-color: var(--turquoise-color);
     border: none;
     color: #fff;
 }
@@ -34,7 +34,7 @@
     padding: 10px 0;
 }
 #news .filter_btn button.active {
-    background-color: #009999;
+    background-color: var(--turquoise-color);
     color: #fff;
 }
 .text-red {
