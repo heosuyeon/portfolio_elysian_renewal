@@ -62,7 +62,7 @@
         //페이저 생성
         $('#numbers').html('');
         for(let x = 1; x <= pageCount; x++){
-            $('#numbers').append(`<li><a href="">${x}</a></li>`);
+            $('#numbers').append(`<li><a href="/index.html">${x}</a></li>`);
         }
         postCounting();
         //페이저 클릭 이벤트

@@ -32,9 +32,9 @@ input:not([type="checkbox"]) {
 }
 button,
 select {
-    /* -webkit-appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none; */
+    appearance: none;
 }
 button {
     color: #000;
@@ -55,7 +55,10 @@ form select:focus {
     text-align: center;
 }
 .hidden {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
+    height: 0;
+    text-indent: -9999999em;
 }
 body.overflow,
 body.open_search {
