@@ -167,7 +167,7 @@ body {
 .login_bg_wrap {
     height: 350px;
     position: relative;
-    background: url('images/sign_top_bg.jpg') no-repeat center center/cover;    
+    background: url('../images/sign_top_bg.jpg') no-repeat center center/cover;    
 }
 .bg_contents {
     height: 100%;
@@ -386,7 +386,7 @@ footer a {
 .sprite {
     width: 50px;
     height: 50px;
-    background: url('images/sprite.png') no-repeat;
+    background: url('../images/sprite.png') no-repeat;
     display: inline-block;
     text-indent: -9999em;
     border: none;
@@ -623,11 +623,11 @@ header.headerbg select {
 }
 .gnb .logo a,
 .dark .headerbg .gnb .logo a {
-    background-image: url('images/logo_white.svg');
+    background-image: url('../images/logo_white.svg');
     height: 25px;
 }
 header.headerbg .gnb .logo a {
-    background-image: url('images/logo_color.svg');
+    background-image: url('../images/logo_color.svg');
 }
 .gnb nav > ul > li.active > a {
     color:var(--turquoise-color);
@@ -899,7 +899,7 @@ header .slide_menu_top {
 .share_print button:before {
     content: '';
     position: absolute;
-    background: url('images/sprite.png') no-repeat;
+    background: url('../images/sprite.png') no-repeat;
     height: 24px;
     right: 100%;
     top: 50%;
@@ -1005,7 +1005,7 @@ footer select {
     border:1px solid #ddd;
 }
 footer .logo a {
-    background: url('images/gslogo.png') no-repeat;
+    background: url('../images/gslogo.png') no-repeat;
     width: 150px;
     height: 50px;
 }
