@@ -32,9 +32,9 @@ input:not([type="checkbox"]) {
 }
 button,
 select {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none; */
 }
 button {
     color: #000;
@@ -47,7 +47,7 @@ select {
 }
 form input:focus,
 form select:focus {
-    outline: none;
+    /* outline: none; */
 }
 .container {
     max-width: 1200px;
@@ -700,10 +700,10 @@ header.headerbg .gnb .logo a {
     appearance: none;
 }
 select::-ms-expand {
-    display:none;  /*for IE10,11*/
+    display: none;  /*for IE10,11*/
 }
 .service select:focus {
-    outline: none;
+    /* outline: none; */
 }
 .service select option {
     color: #000;
