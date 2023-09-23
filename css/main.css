@@ -75,19 +75,19 @@
     background: rgba(0,0,0,.2);
 }
 .main_slide_wrapper .main_slides .slide1 {
-    background-image: url('https://res.cloudinary.com/suyeon/image/upload/v1648750354/images/main_slide_01_rw9lgz.jpg');
+    background-image: url('../images/main_slide_01.jpg');
 }
 .main_slide_wrapper .main_slides .slide2 {
-    background-image: url('https://res.cloudinary.com/suyeon/image/upload/v1648750375/images/main_slide_02_xpfcfc.jpg');
+    background-image: url('../images/main_slide_02.jpg');
 }
 .main_slide_wrapper .main_slides .slide3 {
-    background-image: url('https://res.cloudinary.com/suyeon/image/upload/v1649041719/images/main_slide_03_yak2zl.jpg');
+    background-image: url('../images/main_slide_03.jpg');
 }
 .main_slide_wrapper .main_slides .slide4 {
-    background-image: url('https://res.cloudinary.com/suyeon/image/upload/v1648750381/images/main_slide_04-1_znrlyz.jpg');
+    background-image: url('../images/main_slide_04-1.jpg');
 }
 .main_slide_wrapper .main_slides .slide5 {
-    background-image: url('https://res.cloudinary.com/suyeon/image/upload/v1648750382/images/main_slide_05-1_ctsvz2.jpg');
+    background-image: url('../images/main_slide_05-1.jpg');
 }
 .main_slide_wrapper .slide1 .main_content_warp {
     text-align: left;
@@ -263,13 +263,13 @@
     transition: opacity 1s ease-in-out;
 }
 .horizontal_wrap li .golf {
-    background: url('https://res.cloudinary.com/suyeon/image/upload/v1649041840/images/golf_thumb_agtovh.jpg') left center/cover;
+    background: url('../images/golf_thumb.jpg') left center/cover;
 }
 .horizontal_wrap li .condo {
-    background: url('https://res.cloudinary.com/suyeon/image/upload/v1649045295/images/condo_thumb_zkhcvh.jpg') center center/cover;
+    background: url('../images/condo_thumb.jpg') center center/cover;
 }
 .horizontal_wrap li .ski {
-    background: url('https://res.cloudinary.com/suyeon/image/upload/v1649041840/images/ski_thumb_ochfet.jpg') right center/cover;
+    background: url('../images/ski_thumb.jpg') right center/cover;
 }
 .horizontal_wrap li .gradient {
     position: absolute;
@@ -402,7 +402,7 @@
     right: 0; 
     top: 0; 
     bottom: 0;
-    background: url('https://res.cloudinary.com/suyeon/image/upload/v1648751871/images/grangchef_u4vh2r.jpg') no-repeat center/cover;
+    background: url('../images/grangchef.jpg') no-repeat center/cover;
     background-attachment: fixed;
     transition: all 1s;
     z-index: -2;
