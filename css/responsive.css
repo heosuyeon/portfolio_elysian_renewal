@@ -126,7 +126,7 @@
         width: 40px;
         height: 40px;
         /* background: url(../images/sprite_retinaX2.png) no-repeat; */
-        background: url('https://res.cloudinary.com/suyeon/image/upload/v1648755928/images/sprite_retinaX2_dmrvtp.png') no-repeat;
+        background: url('../images/sprite_retinaX2.png') no-repeat;
         background-size: 290px 450px;
     }
     .sprite.ico-map {
@@ -524,7 +524,7 @@
         z-index: 5;
         position: relative; 
         width: 100%; 
-        background: url('https://res.cloudinary.com/suyeon/image/upload/v1648751871/images/grangchef_u4vh2r.jpg') no-repeat center center/cover;
+        background: url('../images/grangchef.jpg') no-repeat center center/cover;
         /* background-attachment: fixed; */
         background-attachment: initial;
         padding: 50px 15px;
@@ -871,7 +871,7 @@
     }
     /*------------------ski------------------*/
     .main_bg_wrap {
-        background: url('https://res.cloudinary.com/suyeon/image/upload/v1649049703/images/ski_main_bg_responsive_aibrjs.jpg') no-repeat center center / cover;
+        background: url('../images/ski_main_bg_responsive.jpg') no-repeat center center / cover;
     }
     .ski_page .main_content_warp {
         width: 200px;
