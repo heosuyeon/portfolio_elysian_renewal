@@ -43,7 +43,20 @@
     <!-- modernizr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>   
+        // Passive event listeners
+        jQuery.event.special.touchstart = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+        jQuery.event.special.touchmove = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+    </script>
     <!-- slick -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -53,11 +66,11 @@
     <!-- aos css -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <!-- font cdn -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"> -->
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- material icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap">
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -419,7 +432,7 @@
                         </li>
                         <li>
                             <a href="/index.html" title="미팅 시설 안내로 이동">
-                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042072/images/meetins_thumb_cn0ihl.jpg" alt="Meetings" title="미팅 시설 이미지">
+                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042072/images/meetins_thumb_cn0ihl.jpg" width="1.7" height="1" alt="Meetings">
                             </a>
                         </li>
                         <li>
@@ -435,7 +448,7 @@
                         </li>
                         <li>
                             <a href="/index.html" title="레저 시설 안내로 이동">
-                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042072/images/leisure_thumb_ybylvl.jpg" alt="Leisure" title="레저 시설 이미지">
+                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042072/images/leisure_thumb_ybylvl.jpg" width="1.7" height="1" alt="Leisure">
                             </a>
                         </li>
                         <li>
@@ -449,7 +462,7 @@
                         </li>
                         <li>
                             <a href="/index.html" title="웨딩 시설 안내로 이동">
-                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042072/images/weeding_thumb_gr5k72.jpg" alt="Weeding" title="웨딩 시설 이미지">
+                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042072/images/weeding_thumb_gr5k72.jpg" width="1.7" height="1" alt="Weeding">
                             </a>
                         </li>
                     </ul>
@@ -471,7 +484,7 @@
                     <div>
                         <a href="/index.html" title="퍼블릭 이용권 안내 페이지로 이동">
                             <figure>
-                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_01_dnssno.jpg" alt="퍼블릭 이용권, 32,000원, 2021-10-31까지" title="퍼블릭 이용권 이미지">                
+                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_01_dnssno.jpg" alt="퍼블릭 이용권, 32,000원, 2021-10-31까지" title="퍼블릭 이용권 이미지" width="1.132375" height="1">                
                             </figure>
                             <div class="img_caption">
                                 <h3>퍼블릭 이용권</h3>
@@ -484,7 +497,7 @@
                     <div>
                         <a href="/index.html" title="엘리시안강촌 객실 + 조식뷔페 2인 이용권 안내 페이지로 이동">
                             <figure>
-                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_02_ixfyjl.jpg" alt="엘리시안강촌 객실 + 조식뷔페 2인, 115,500원, 2021-11-30까지" title="엘리시안강촌 객실 + 조식뷔페 2인 이용권 이미지">
+                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_02_ixfyjl.jpg" alt="엘리시안강촌 객실 + 조식뷔페 2인, 115,500원, 2021-11-30까지" title="엘리시안강촌 객실 + 조식뷔페 2인 이용권 이미지" width="1.132375" height="1">
                             </figure>
                             <div class="img_caption">
                                 <h3>엘리시안강촌 객실 + 조식뷔페 2인</h3>
@@ -496,7 +509,7 @@
                     <div>
                         <a href="/index.html" title="엘리시안강촌 객실 + 인생닭갈비 2인 이용권 안내 페이지로 이동">
                             <figure>
-                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_03_oxcwao.jpg" alt="엘리시안강촌 객실 + 인생닭갈비 2인, 111,300원, 2021-11-30까지" title="엘리시안강촌 객실 + 인생닭갈비 2인 이용권 이미지">
+                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_03_oxcwao.jpg" alt="엘리시안강촌 객실 + 인생닭갈비 2인, 111,300원, 2021-11-30까지" title="엘리시안강촌 객실 + 인생닭갈비 2인 이용권 이미지" width="1.132375" height="1">
                             </figure>
                             <div class="img_caption">
                                 <h3>엘리시안강촌 객실 + 인생닭갈비 2인</h3>
@@ -508,7 +521,7 @@
                     <div>
                         <a href="/index.html" title="엘리시안강촌 객실 + 브런치세트 2인 이용권 안내 페이지로 이동">
                             <figure>
-                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_04_fbrhac.jpg" alt="엘리시안강촌 객실 + 브런치세트 2인, 104,000원, 2021-11-30까지" title="엘리시안강촌 객실 + 브런치세트 2인 이용권 이미지">
+                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_04_fbrhac.jpg" alt="엘리시안강촌 객실 + 브런치세트 2인, 104,000원, 2021-11-30까지" title="엘리시안강촌 객실 + 브런치세트 2인 이용권 이미지" width="1.132375" height="1">
                             </figure>
                             <div class="img_caption">
                                 <h3>엘리시안강촌 객실 + 브런치세트 2인</h3>
@@ -520,7 +533,7 @@
                     <div>
                         <a href="/index.html" title="엘리시안강촌 객실 + 킹카누 2인 + 브런치세트 2인 이용권 안내 페이지로 이동">
                             <figure>
-                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_05_kvikbc.jpg" alt="엘리시안강촌 객실 + 킹카누 2인 + 브런치세트 2인, 136,000원, 2021-11-30까지" title="엘리시안강촌 객실 + 킹카누 2인 + 브런치세트 2인 이용권 이미지">
+                                <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042249/images/offers_05_kvikbc.jpg" alt="엘리시안강촌 객실 + 킹카누 2인 + 브런치세트 2인, 136,000원, 2021-11-30까지" title="엘리시안강촌 객실 + 킹카누 2인 + 브런치세트 2인 이용권 이미지" width="1.132375" height="1">
                             </figure>
                             <div class="img_caption">
                                 <h3>엘리시안강촌 객실 + 킹카누 2인 + 브런치세트 2인</h3>
@@ -591,141 +604,141 @@
                             <h3>등록된 게시물이 없습니다.</h3>
                         </li>
                         <li class="news_etc swiper-slide">                           
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042847/images/news_etc_03_o9prbj.jpg" alt="엘리시안 강촌 월간 소식지 vol.19, 해피 모먼트, 2021년 10월" title="엘리시안 강촌 해피 모먼트 월간 소식지 vol.19 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649042847/images/news_etc_03_o9prbj.jpg" width="1.5" height="1" alt="엘리시안 강촌 월간 소식지 vol.19, 해피 모먼트, 2021년 10월">
                             <div class="news_title">
                                 <h3>엘리시안 강촌 해피 모먼트 월간 소식지 vol.19 안내</h3>
                                 <p>2021-10-01</p>
                             </div>
                         </li>
                         <li class="news_condo swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044548/images/news_condo_01_wvygwl.jpg" alt="스마트한 당신을 위한 스마트 체크인 서비스 안내" title="콘도 스마트 체크인 서비스 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044548/images/news_condo_01_wvygwl.jpg" width="1.5" height="1" alt="스마트한 당신을 위한 스마트 체크인 서비스 안내">
                             <div class="news_title">
                                 <h3>콘도 스마트 체크인 서비스 안내</h3>
                                 <p>2021-10-01</p>
                             </div>
                         </li>
                         <li class="news_ski swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044408/images/news_ski_01_p9hflt.jpg" alt="21/22 동계시즌 엘리시안 강촌 공식 스포츠클럽 모집, 엘리시안 스키장과 함께 할 스포츠클럽
-                            을 모집합니다." title="21/22 동계 시즌 공식 스포츠클럽 모집 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044408/images/news_ski_01_p9hflt.jpg" width="1.5" height="1" alt="21/22 동계시즌 엘리시안 강촌 공식 스포츠클럽 모집, 엘리시안 스키장과 함께 할 스포츠클럽
+                            을 모집합니다.">
                             <div class="news_title">
                                 <h3>21/22 동계 시즌 공식 스포츠클럽 모집 안내</h3>
                                 <p>2021-09-29</p>
                             </div>
                         </li>
                         <li class="news_ski swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044408/images/news_ski_02_ybbxck.jpg" alt="21/22 시즌 엘리시안강촌 BASE 스키/보드 동호회 모집" title="21/22 시즌 엘리시안강촌 BASE 동호회 모집">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044408/images/news_ski_02_ybbxck.jpg" width="1.5" height="1" alt="21/22 시즌 엘리시안강촌 BASE 스키/보드 동호회 모집">
                             <div class="news_title">
                                 <h3>21/22 시즌 엘리시안강촌 BASE 동호회 모집</h3>
                                 <p>2021-09-29</p>
                             </div>
                         </li>
                         <li class="news_ski swiper-slide">              
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649043392/images/news_ski_03_byufav.jpg" alt="강촌의 겨울 낭만은 눈부시다!, 엘리시안 강촌 21/22 시즌 주중권, elysian season pass" title="엘리시안 강촌 21/22 시즌 스키 시즌권 주중권 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649043392/images/news_ski_03_byufav.jpg" width="1.5" height="1" alt="강촌의 겨울 낭만은 눈부시다!, 엘리시안 강촌 21/22 시즌 주중권, elysian season pass">
                             <div class="news_title">
                                 <h3>엘리시안 강촌 21/22 시즌 스키 시즌권 주중권 안내</h3>
                                 <p>2021-09-28</p>
                             </div>
                         </li>
                         <li class="news_condo swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044548/images/news_condo_02_b5jn7q.jpg" alt="2021년 엘리시안 강촌 동계 성수기 콘도 예약 안내" title="21/22 동계 성수기 콘도 예약 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044548/images/news_condo_02_b5jn7q.jpg" width="1.5" height="1" alt="2021년 엘리시안 강촌 동계 성수기 콘도 예약 안내">
                             <div class="news_title">
                                 <h3>21/22 동계 성수기 콘도 예약 안내</h3>
                                 <p>2021-09-27</p>
                             </div>    
                         </li>  
                         <li class="news_golf swiper-slide">                     
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044943/images/news_golf_01_klhno0.jpg" alt="엘리시안 강촌 회원제 골프 예약 안내" title="11월 엘리시안 강촌 CC 정규홀 예약 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044943/images/news_golf_01_klhno0.jpg" width="1.5" height="1" alt="엘리시안 강촌 회원제 골프 예약 안내">
                             <div class="news_title">
                                 <h3>11월 엘리시안 강촌 CC 정규홀 예약 안내</h3>
                                 <p>2021-09-27</p>
                             </div>
                         </li>
                         <li class="news_golf swiper-slide">                     
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044943/images/news_golf_01_klhno0.jpg" alt="엘리시안 강촌 회원제 골프 예약 안내" title="11월 엘리시안 강촌 CC 정규홀 예약 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044943/images/news_golf_01_klhno0.jpg" width="1.5" height="1" alt="엘리시안 강촌 회원제 골프 예약 안내">
                             <div class="news_title">
                                 <h3>11월 엘리시안 강촌 CC 정규홀 예약 안내</h3>
                                 <p>2021-09-27</p>
                             </div>
                         </li>
                         <li class="news_condo swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044548/images/news_condo_03_pgzfbp.jpg" alt="엘리시안 강촌 리조트 사회적 거리두기 지침에 따른 운영안내" title="사회적 거리두기 지침에 따른 콘도 사용 인원 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044548/images/news_condo_03_pgzfbp.jpg" width="1.5" height="1" alt="엘리시안 강촌 리조트 사회적 거리두기 지침에 따른 운영안내">
                             <div class="news_title">
                                 <h3>사회적 거리두기 지침에 따른 콘도 사용 인원 안내</h3>
                                 <p>2021-09-21</p>
                             </div>
                         </li>
                         <li class="news_etc swiper-slide">                       
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045194/images/news_etc_02_bygsxi.jpg" alt="추석 비어가든 특별 운영 안내" title="9월 추석 맞이 이벤트 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045194/images/news_etc_02_bygsxi.jpg" width="1.5" height="1" alt="추석 비어가든 특별 운영 안내">
                             <div class="news_title">
                                 <h3>9월 추석 맞이 이벤트 안내</h3>
                                 <p>2021-09-10</p>
                             </div>
                         </li>
                         <li class="news_golf swiper-slide">  
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044943/images/news_golf_02_wfmoqk.jpg" alt="그린 에어레이션 작업 안내" title="그린 에어레이션 작업 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044943/images/news_golf_02_wfmoqk.jpg" width="1.5" height="1" alt="그린 에어레이션 작업 안내">
                             <div class="news_title">
                                 <h3>그린 에어레이션 작업 안내</h3>
                                 <p>2021-09-10</p>
                             </div>
                         </li>
                         <li class="news_golf swiper-slide">                      
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044943/images/news_golf_03_axu19w.jpg" alt="엘리시안 강촌 정규홀 이벤트, 8월 포토제닉 이벤트 당첨자 안내, 이벤트 참여에 감사드리며 앞으로도 많은 관심과 성원 부탁드립니다. 당첨자분들께는 인스타그램 DM을 통하여 개별 안내드립니다. 엘리시안 강촌" title="8월 정규홀 포토제닉 이벤트 당첨자 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044943/images/news_golf_03_axu19w.jpg" width="1.5" height="1" alt="엘리시안 강촌 정규홀 이벤트, 8월 포토제닉 이벤트 당첨자 안내, 이벤트 참여에 감사드리며 앞으로도 많은 관심과 성원 부탁드립니다. 당첨자분들께는 인스타그램 DM을 통하여 개별 안내드립니다. 엘리시안 강촌">
                             <div class="news_title">
                                 <h3>8월 정규홀 포토제닉 이벤트 당첨자 안내</h3>
                                 <p>2021-09-06</p> 
                             </div>
                         </li>
                         <li class="news_etc swiper-slide">                       
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045194/images/news_etc_01_kdzcle.jpg" alt="엘리시안 강촌 월간 소식지 vol.18 해피 모먼트 2021년 9월" title="엘리시안 강촌 해피 모먼트 월간 소식지 vol.18 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045194/images/news_etc_01_kdzcle.jpg" width="1.5" height="1" alt="엘리시안 강촌 월간 소식지 vol.18 해피 모먼트 2021년 9월">
                             <div class="news_title">
                                 <h3>엘리시안 강촌 해피 모먼트 월간 소식지 vol.18 안내</h3>
                                 <p>2021-08-30</p>
                             </div>
                         </li>
                         <li class="news_employment swiper-slide">                                 
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045107/images/news_emp_01_m8wwgm.jpg" alt="GS건설 엘리시안 2020년 하반기 신입/경력 사원 2차 공개 채용, Refresh your life!" title="2020년 하반기 신입/경력 사원 2차 공개 채용 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045107/images/news_emp_01_m8wwgm.jpg" width="1.5" height="1" alt="GS건설 엘리시안 2020년 하반기 신입/경력 사원 2차 공개 채용, Refresh your life!">
                             <div class="news_title">
                                 <h3>2020년 하반기 신입/경력 사원 2차 공개 채용 안내</h3>
                                 <p>2020-11-04</p> 
                             </div>
                         </li>
                         <li class="news_employment swiper-slide">                             
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045107/images/news_emp_02_iiwb0y.jpg" alt="GS건설 엘리시안 2020년 하반기 신입/경력 채용 Refresh your life!, 2020 하반기 신입/경력 모집" title="2020년 하반기 신입/경력 사원 공개 채용 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045107/images/news_emp_02_iiwb0y.jpg" width="1.5" height="1" alt="GS건설 엘리시안 2020년 하반기 신입/경력 채용 Refresh your life!, 2020 하반기 신입/경력 모집">
                             <div class="news_title">
                                 <h3>2020년 하반기 신입/경력 사원 공개 채용 안내</h3>
                                 <p>2020-10-12</p>
                             </div>
                         </li>  
                         <li class="news_employment swiper-slide">               
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045107/images/news_emp_03_unlyga.jpg" alt="GS건설 엘리시안 2020년 하반기 신입/경력 사원 공개 채용 Refresh your life!" title="2020년 하반기 신입/경력 채용 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045107/images/news_emp_03_unlyga.jpg" width="1.5" height="1" alt="GS건설 엘리시안 2020년 하반기 신입/경력 사원 공개 채용 Refresh your life!">
                             <div class="news_title">
                                 <h3>2020년 하반기 신입/경력 채용 안내</h3>
                                 <p>2020-07-02</p>
                             </div>
                         </li>
                         <li class="news_condo swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044548/images/news_condo_03_pgzfbp.jpg" alt="엘리시안 강촌 리조트 사회적 거리두리 지침에 따른 운영안내" title="사회적 거리두기 지침에 따른 콘도 사용 인원 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649044548/images/news_condo_03_pgzfbp.jpg" width="1.5" height="1" alt="엘리시안 강촌 리조트 사회적 거리두리 지침에 따른 운영안내">
                             <div class="news_title">
                                 <h3>사회적 거리두기 지침에 따른 콘도 사용 인원 안내</h3>
                                 <p>2021-09-21</p>
                             </div>
                         </li>
                         <li class="news_ski swiper-slide">              
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649043392/images/news_ski_03_byufav.jpg" alt="강촌의 겨울 낭만은 눈부시다! 엘리시안 강촌 21/22 시즌 주중권 elysian season pass" title="엘리시안 강촌 21/22 시즌 스키 시즌권 주중권 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649043392/images/news_ski_03_byufav.jpg" width="1.5" height="1" alt="강촌의 겨울 낭만은 눈부시다! 엘리시안 강촌 21/22 시즌 주중권 elysian season pass">
                             <div class="news_title">
                                 <h3>엘리시안 강촌 21/22 시즌 스키 시즌권 주중권 안내</h3>
                                 <p>2021-09-28</p>
                             </div>
                         </li>
                         <li class="news_employment swiper-slide">               
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045107/images/news_emp_03_unlyga.jpg" alt="GS건설 엘리시안 2020년 하반기 신입/경력 사원 공개 채용 Refresh your life!" title="2020년 하반기 신입/경력 채용 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045107/images/news_emp_03_unlyga.jpg" width="1.5" height="1" alt="GS건설 엘리시안 2020년 하반기 신입/경력 사원 공개 채용 Refresh your life!">
                             <div class="news_title">
                                 <h3>2020년 하반기 신입/경력 채용 안내</h3>
                                 <p>2020-07-02</p>
                             </div>    
                         </li>
                         <li class="news_etc swiper-slide">                       
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045194/images/news_etc_01_kdzcle.jpg" alt="엘리시안 강촌 월간 소식지 vol.18 해피 모먼트 2021년 9월" title="엘리시안 강촌 해피 모먼트 월간 소식지 vol.18 안내">
+                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045194/images/news_etc_01_kdzcle.jpg" width="1.5" height="1" alt="엘리시안 강촌 월간 소식지 vol.18 해피 모먼트 2021년 9월">
                             <div class="news_title">
                                 <h3>엘리시안 강촌 해피 모먼트 월간 소식지 vol.18 안내</h3>
                                 <p>2021-08-30</p>

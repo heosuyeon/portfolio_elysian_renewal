@@ -1,10 +1,11 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+/* @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css); */
 
 :root {
     --turquoise-color: #008080;
     /* #009999; */
-  }
+}
 
 p,h2,h3,h4,h5,h6,th,td,li {
     cursor: default;
@@ -74,12 +75,21 @@ body {
     font-size: 16px;
     line-height: 26px;
 }
-.turquoise {
-    color: var(--turquoise-color);
+
+@font-face {
+    font-family: 'NanumSquare', sans-serif; 
+    src:
+      url('../font/NanumSquareR.woff2') format("woff2"),
+      url('../font/NanumSquareB.woff2') format("woff2");
+    font-display: swap;
 }
+
 .font_nanum {
     font-family: 'NanumSquare', sans-serif; 
     transform: skew(-0.03deg);
+}
+.turquoise {
+    color: var(--turquoise-color);
 }
 .bg_tt {
     color: #fff;
