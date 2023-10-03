@@ -167,7 +167,7 @@ body {
 .login_bg_wrap {
     height: 350px;
     position: relative;
-    background: url('../images/sign_top_bg.jpg') no-repeat center center/cover;    
+    background: url('../images/sign_top_bg.webp') no-repeat center center/cover;    
 }
 .bg_contents {
     height: 100%;

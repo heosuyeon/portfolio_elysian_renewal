@@ -524,7 +524,7 @@
         z-index: 5;
         position: relative; 
         width: 100%; 
-        background: url('../images/grangchef.jpg') no-repeat center center/cover;
+        background: url('../images/grangchef.webp') no-repeat center center/cover;
         /* background-attachment: fixed; */
         background-attachment: initial;
         padding: 50px 15px;
@@ -871,7 +871,7 @@
     }
     /*------------------ski------------------*/
     .main_bg_wrap {
-        background: url('../images/ski_main_bg_responsive.jpg') no-repeat center center / cover;
+        background: url('../images/ski_main_bg_responsive.webp') no-repeat center center / cover;
     }
     .ski_page .main_content_warp {
         width: 200px;

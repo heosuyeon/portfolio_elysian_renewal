@@ -1,6 +1,6 @@
 @import url(common.css);
 .news_bg {
-    background: url('https://res.cloudinary.com/suyeon/image/upload/v1649046072/images/news_top_bg_dgxwt1.jpg') no-repeat center center/cover;
+    background: url('../images/news_top_bg.webp') no-repeat center center/cover;
 }
 #news form {
     background: #f7f7f7;

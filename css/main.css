@@ -75,19 +75,19 @@
     background: rgba(0,0,0,.2);
 }
 .main_slide_wrapper .main_slides .slide1 {
-    background-image: url('../images/main_slide_01.jpg');
+    background-image: url('../images/main_slide_01.webp');
 }
 .main_slide_wrapper .main_slides .slide2 {
-    background-image: url('../images/main_slide_02.jpg');
+    background-image: url('../images/main_slide_02.webp');
 }
 .main_slide_wrapper .main_slides .slide3 {
-    background-image: url('../images/main_slide_03.jpg');
+    background-image: url('../images/main_slide_03.webp');
 }
 .main_slide_wrapper .main_slides .slide4 {
-    background-image: url('../images/main_slide_04-1.jpg');
+    background-image: url('../images/main_slide_04-1.webp');
 }
 .main_slide_wrapper .main_slides .slide5 {
-    background-image: url('../images/main_slide_05-1.jpg');
+    background-image: url('../images/main_slide_05-1.webp');
 }
 .main_slide_wrapper .slide1 .main_content_warp {
     text-align: left;
@@ -263,13 +263,13 @@
     transition: opacity 1s ease-in-out;
 }
 .horizontal_wrap li .golf {
-    background: url('../images/golf_thumb.jpg') left center/cover;
+    background: url('../images/golf_thumb.webp') left center/cover;
 }
 .horizontal_wrap li .condo {
-    background: url('../images/condo_thumb.jpg') center center/cover;
+    background: url('../images/condo_thumb.webp') center center/cover;
 }
 .horizontal_wrap li .ski {
-    background: url('../images/ski_thumb.jpg') right center/cover;
+    background: url('../images/ski_thumb.webp') right center/cover;
 }
 .horizontal_wrap li .gradient {
     position: absolute;
@@ -402,7 +402,7 @@
     right: 0; 
     top: 0; 
     bottom: 0;
-    background: url('../images/grangchef.jpg') no-repeat center/cover;
+    background: url('../images/grangchef.webp') no-repeat center/cover;
     background-attachment: fixed;
     transition: all 1s;
     z-index: -2;
