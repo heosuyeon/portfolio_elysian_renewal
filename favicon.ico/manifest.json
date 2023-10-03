@@ -1,5 +1,7 @@
 {
  "name": "App",
+ "theme_color": "#ffffff",
+ "background_color": "#555555",
  "icons": [
   {
    "src": "./android-icon-36x36.png",
