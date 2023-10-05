@@ -52,11 +52,9 @@
     <!-- masonry -->
     <script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <!-- font cdn -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"> -->
     <!-- material icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.rel = 'stylesheet'">
 
     <link rel="stylesheet" href="css/ski.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -79,13 +77,13 @@
                         </li>
                     </ul>
                     <div class="lang">
-                        <i class="fas fa-globe"></i>
+                        <span class="material-icons">language</span>
                         <select name="change_language" id="change-lag">
                             <option value="kr">한국어</option>
                             <option value="en">English</option>
                             <option value="ch">Chinese</option>
                         </select>
-                        <i class="fa fa-caret-down"></i>  
+                        <span class="material-icons">arrow_drop_down</span>
                     </div>
                 </div>
                 <div class="search_form">

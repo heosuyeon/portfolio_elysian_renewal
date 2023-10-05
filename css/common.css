@@ -640,7 +640,7 @@ header.headerbg {
     box-shadow: 0 3px 3px rgba(0,0,0,.1);
 }
 header.headerbg a,
-header.headerbg i,
+header.headerbg .material-icons,
 header.headerbg select {
     color: #000;
 } 
@@ -727,9 +727,11 @@ header.headerbg .gnb .logo a {
 }
 .lang {
     position: relative;
+    display: flex;
+    align-items: center;
 }
-.fa-globe {
-    font-size: 14px;
+.lang span:first-child {
+    font-size: 20px;
     padding-right: 5px;
 }
 .service select {
@@ -737,7 +739,6 @@ header.headerbg .gnb .logo a {
     color: #fff;
     border: none; 
     background: transparent;
-    
     -webkit-appearance: none;  /* for chrome */
     -moz-appearance: none;  /* for firefox */
     appearance: none;
@@ -1106,7 +1107,7 @@ footer .sns a {
 .dark table td,
 .dark .bread_crumbs > li,
 .dark .table_desc li,
-.dark header.headerbg i, 
+.dark header.headerbg .material-icons, 
 .dark .offers-wrap .img_caption span,
 .dark .popup,
 .dark .btn_tt {

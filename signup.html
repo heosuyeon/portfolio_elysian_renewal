@@ -47,10 +47,9 @@
     <!-- jquery validation -->
     <script defer src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- material icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.rel = 'stylesheet'">
     
     <link rel="stylesheet" href="css/sign.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -73,13 +72,13 @@
                         </li>
                     </ul>
                     <div class="lang">
-                        <i class="fas fa-globe"></i>
+                        <span class="material-icons">language</span>
                         <select name="change_language" id="change-lag">
                             <option value="kr">한국어</option>
                             <option value="en">English</option>
                             <option value="ch">Chinese</option>
                         </select>
-                        <i class="fa fa-caret-down"></i>  
+                        <span class="material-icons">arrow_drop_down</span>
                     </div>
                 </div>
                 <div class="search_form">
