@@ -43,7 +43,20 @@
     <!-- modernizr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>   
+        // Passive event listeners
+        jQuery.event.special.touchstart = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+        jQuery.event.special.touchmove = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+    </script>
     <!-- material icons -->
     <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.rel = 'stylesheet'">
     <!-- lite youtube embed css -->
@@ -230,7 +243,8 @@
                             <div class="sprite home">home</div>
                         </a>
                     </li>
-                    <li class="bc_2nd" data-guide="ski">스키<span class="material-icons-outlined">arrow_drop_down</span>
+                    <li class="bc_2nd" data-guide="ski">스키
+                        <span class="material-icons">arrow_drop_down</span>
                         <ul class="bc_depth2">
                             <li data-guide="golf">골프</li>
                             <li data-guide="condo">콘도</li>
@@ -243,7 +257,8 @@
                             <li data-guide="customer">고객센터</li>
                         </ul>
                     </li>
-                    <li data-guide="slope">슬로프안내<span class="material-icons-outlined">arrow_drop_down</span>
+                    <li data-guide="slope">슬로프안내
+                        <span class="material-icons">arrow_drop_down</span>
                         <ul class="bc_depth2">
                             <li class="activation" data-guide="info">
                                 <a href="ski_info.html">이용안내</a>

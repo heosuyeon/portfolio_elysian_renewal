@@ -43,11 +43,22 @@
     <!-- modernizr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>   
+        // Passive event listeners
+        jQuery.event.special.touchstart = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+        jQuery.event.special.touchmove = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+    </script>
     <!-- jquery validation -->
     <script defer src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-    <!-- fontawesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- material icons -->
     <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.rel = 'stylesheet'">
     
@@ -276,7 +287,7 @@
                                     <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
-                                <span class="material-icons-outlined">arrow_drop_down</span>
+                                <span class="material-icons">arrow_drop_down</span>
                             </div>
                             <input type="text" name="birthday" placeholder="DD" title="생일을 입력해주세요.">
                         </div>
@@ -500,7 +511,7 @@
                                 <option value="61">호주 +61</option> 
                                 <option value="852">홍콩 +852</option>
                             </select>   
-                            <span class="material-icons-outlined">arrow_drop_down</span>
+                            <span class="material-icons">arrow_drop_down</span>
                         </div>
                         <input type="text" id="userphone" name="userphone" placeholder="전화번호 입력 '-'제외 " title="전화번호 입력해주세요.">
                         <button type="button" class="form_btn">인증번호 받기</button>
@@ -521,7 +532,7 @@
                                     <option value="google.com">google.com</option>
                                     <option value="direct">직접입력</option>
                                 </select>
-                                <span class="material-icons-outlined">arrow_drop_down</span>
+                                <span class="material-icons">arrow_drop_down</span>
                             </div>
                             <input type="email" name="userdomaindirect" id="direct" title="이메일 도메인 직접입력"> 
                         </div>

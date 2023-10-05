@@ -894,10 +894,10 @@ header .slide_menu_top {
 .bread_crumbs .bc_depth2 li:hover {
     background-color: #f2f2f3;
 }
-.location_wrap .material-icons-outlined {
+.location_wrap .material-icons {
     padding-left: 35px;
 }
-.bread_crumbs >li.active .material-icons-outlined {
+.bread_crumbs >li.active .material-icons {
     padding: 0 35px 0 0px;
     transform: rotate(-180deg);
 }
