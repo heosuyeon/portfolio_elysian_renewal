@@ -38,7 +38,7 @@
 }
 .ski_page .main_content_warp p:nth-child(2) {
     font-size: 18px;
-    font-weight: lighter;
+    font-weight: 300;
 }
 .ski_page .main_content_warp p:nth-child(3) {
     font-weight: bold;

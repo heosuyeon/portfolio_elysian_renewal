@@ -55,7 +55,6 @@ form select:focus {
     text-align: center;
 }
 .hidden {
-    /* display: none; */
     visibility: hidden;
     height: 0;
     text-indent: -9999999em;
@@ -65,11 +64,47 @@ body.open_search {
     overflow: hidden;
 }
 /* -----------------TYPOGRAPHY----------------- */
+/* NotoSansKR-Hestia (Apache License 2.0)
+   Copyright (c) theeluwin
+   License: Apache License 2.0
+   Source: https://github.com/theeluwin/NotoSansKR-Hestia
+*/
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Sans Light'), local('NotoSans-Light'),
+        /* url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/fonts/woff/NotoSansKR-Light-Hestia.woff) format('woff'),
+        url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/fonts/otf/NotoSansKR-Light-Hestia.otf) format('opentype'); */
+        url('../fonts/NotoSansKR-Light-Hestia.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+        /* url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/fonts/woff/NotoSansKR-Regular-Hestia.woff) format('woff'),
+        url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/fonts/otf/NotoSansKR-Regular-Hestia.otf) format('opentype'); */
+        url('../fonts/NotoSansKR-Regular-Hestia.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+        /* url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/fonts/woff/NotoSansKR-Bold-Hestia.woff) format('woff'), */
+        /* url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/fonts/otf/NotoSansKR-Bold-Hestia.otf) format('opentype'); */
+        url('../fonts/NotoSansKR-Bold-Hestia.woff') format('woff');
+    font-display: swap;
+}
+
 /* 
 font-family: 'Noto Sans', sans-serif;
 font-family: 'Noto Sans KR', sans-serif; 
 */
-@font-face {
+/* @font-face {
     font-family: 'Noto Sans KR';
     src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'),
         url('../font/NotoSansKR-Bold.woff2') format('woff2'),
@@ -95,14 +130,13 @@ font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 @font-face {
     font-family: 'NanumSquare'; 
     src: url('../font/NanumSquareR.woff2') format("woff2");
     font-display: swap;
 }
-
 @font-face {
     font-family: 'NanumSquare'; 
     src: url('../font/NanumSquareB.woff2') format("woff2");
@@ -110,7 +144,8 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: 'Noto Sans Korean', sans-serif;
     font-size: 16px;
     line-height: 26px;
 }
@@ -966,7 +1001,7 @@ header .slide_menu_top {
     animation : down1 1.5s forwards;
 }
 .main_content_warp p:nth-child(3) {
-    font-weight: lighter;
+    font-weight: 300;
     animation : down1 0.5s forwards;
 }
 @keyframes down1 {
