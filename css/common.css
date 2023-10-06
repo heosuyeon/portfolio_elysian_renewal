@@ -59,6 +59,9 @@ form select:focus {
     height: 0;
     text-indent: -9999999em;
 }
+.display_none {
+    display: none;
+}
 body.overflow,
 body.open_search {
     overflow: hidden;
