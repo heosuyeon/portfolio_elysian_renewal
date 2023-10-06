@@ -1,4 +1,4 @@
-// $(function(){
+$(function(){
   /*----------------cookie popup---------------*/
   var myPopup = document.querySelector('.popup'),
       checkbox = document.querySelector('#nomore'),
@@ -271,4 +271,4 @@
   });
   filterBtn.eq(0).trigger('click');
   
-// });//ready
+});//ready
