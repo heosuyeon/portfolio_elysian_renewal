@@ -272,7 +272,7 @@ $(function(){
     if($('.slick-track').children('.swiper-slide').length == 0) {
       newsSlides.slick('slickAdd', noResult);
     }
-    console.log($('.slick-track').children('.swiper-slide').length)
+    // console.log($('.slick-track').children('.swiper-slide').length)
 
     // if(dataFilter =='all'){
     //   //전체 삭제하고 다시 넣어준 후에 전부 보여주기
