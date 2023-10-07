@@ -1,4 +1,5 @@
 $(function(){
+  AOS.init();   
   /*----------------cookie popup---------------*/
   var myPopup = document.querySelector('.popup'),
       checkbox = document.querySelector('#nomore'),
