@@ -246,6 +246,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.slick-disabled {
+    display: none;
+}
 .slick-prev,
 .slick-next {
     position: absolute;

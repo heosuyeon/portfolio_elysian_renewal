@@ -179,7 +179,8 @@ $(function(){
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: true,
+          infinite: false,
         }
       },
       {
@@ -191,7 +192,7 @@ $(function(){
           centerPadding: '40px',
           centerPadding: 0,
           arrows: false,
-          dots:true
+          dots: true,
         }
       }
     ]
@@ -254,7 +255,7 @@ $(function(){
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          
+          infinite: false,
         }
       },
     ]
