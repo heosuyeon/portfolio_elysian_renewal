@@ -587,10 +587,13 @@
 .news_slide_wrapper {
     position: relative;
 }
-.news_slides > li:not(.emptymessage) {
+.news_slides > div:not(.emptymessage) {
     text-align: left;
 }
-.news_slides li .news_title {
+.news_slides .slick-slide {
+    padding: 0 20px;
+}
+.news_slides .news_title {
     height: 100px;
     padding: 10px 5px;
     display: flex;
@@ -612,7 +615,7 @@
     color: #666;
     border-top: 1px solid #ddd;
 }
-.news_slides li.emptymessage {
+.news_slides .emptymessage {
     width: 100%;
     text-align: center;
     padding: 150px 0;

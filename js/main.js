@@ -169,8 +169,9 @@ $(function(){
     autoplay: true,
     arrows: true,
     autoplaySpeed: 5000,
-    pauseOnHover:true,
-    dots:true,
+    pauseOnHover: true,
+    dots: true,
+    infinite: false,
     responsive: [
       {
         breakpoint: 768,
@@ -187,7 +188,7 @@ $(function(){
           slidesToShow: 1.05,
           slidesToScroll: 1,
           centerMode: true,
-          // centerPadding: '40px',
+          centerPadding: '40px',
           centerPadding: 0,
           arrows: false,
           dots:true
@@ -219,55 +220,86 @@ $(function(){
   });
   /*----------------------------news---------------------------*/
   let filterBtn = $('.filter_btn button');
-  let newsListUl = $('.news_slides');
-  const newsList =  $('.news_slides > li.swiper-slide');
-  const noResult = newsListUl.find('.emptymessage');
+  let newsSlides = $('.news_slides');
+  const newsSlidesItem =  newsSlides.find('> .swiper-slide'); 
+  const noResult = newsSlides.find('> .emptymessage');
 
-  var swiper = new Swiper(".mySwiper", {
-    a11y:{
-      slideRole: 'listitem',
-    },
-    slidesPerView: 2,
-    spaceBetween: 20,
-    allowTouchMove:false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      640: { //640 이상
-        slidesPerView: 3,
-        spaceBetween: 30,
-      }
-    }
+  // var swiper = new Swiper(".mySwiper", {
+  //   a11y:{
+  //     slideRole: 'listitem',
+  //   },
+  //   slidesPerView: 2,
+  //   spaceBetween: 20,
+  //   allowTouchMove:false,
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  //   breakpoints: {
+  //     640: { //640 이상
+  //       slidesPerView: 3,
+  //       spaceBetween: 30,
+  //     }
+  //   }
+  // });
+
+  newsSlides.slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          
+        }
+      },
+    ]
   });
 
   filterBtn.click(function(e){
     e.preventDefault();
     $(this).addClass('active').siblings().removeClass('active'); //버튼 스타일
     let dataFilter = $(this).attr('data-filter');
- 
-    if(dataFilter =='all'){
-      //전체 삭제하고 다시 넣어준 후에 전부 보여주기
-      newsList.remove();
-      newsListUl.append(newsList);
-      //newsList.show(); //리스트 전체 보이기
-    }else{
-      newsList.remove();
-      newsListUl.append(newsList.filter(dataFilter));
-      //$(dataFilter).show(); //선택한 리스트만 보이기
+
+    newsSlides.slick('slickRemove',null, null, true);
+    newsSlides.slick('slickAdd', newsSlidesItem.filter(dataFilter));
+
+    if($('.slick-track').children('.swiper-slide').length == 0) {
+      newsSlides.slick('slickAdd', noResult);
     }
-    //슬라이드 업데이트후 위치 옮기기
-    swiper.updateSlides();
-    swiper.slideTo(0, 100, false);
+    console.log($('.slick-track').children('.swiper-slide').length)
+
+    // if(dataFilter =='all'){
+    //   //전체 삭제하고 다시 넣어준 후에 전부 보여주기
+    //   $('.swiper-wrapper').slick('slickRemove',null, null, true);
+    //   // newsSlidesItem.remove();
+    //   // newsSlides.append(newsSlidesItem);
+    //   //newsSlidesItem.show(); //리스트 전체 보이기
+    // }else{
+    //   $('.swiper-wrapper').slick('slickRemove',null, null, true);
+    //   // newsSlidesItem.remove();
+    //   // newsSlides.append(newsSlidesItem.filter(dataFilter));
+    //   //$(dataFilter).show(); //선택한 리스트만 보이기
+    // }
+    // 슬라이드 업데이트후 위치 옮기기
+    // swiper.updateSlides();
+    // swiper.slideTo(0, 100, false);
+
     // console.log('swiper.realIndex :', swiper.realIndex,'swiper.activeIndex :', swiper.activeIndex);
     // console.log('swiper.slides.length :', swiper.slides.length);
+
     //게시글 없음
-    if(swiper.slides.length == 0) {
-      noResult.css({display:'block'});
-    }else{
-      noResult.css({display:'none'});
-    }   
+    // if(swiper.slides.length == 0) {
+    //   noResult.css({display:'block'});
+    // }else{
+    //   noResult.css({display:'none'});
+    // }   
+
+      
   });
   filterBtn.eq(0).trigger('click');
   

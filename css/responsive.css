@@ -842,7 +842,10 @@
     .news .controls button {
         font-size: 0.875rem;
     }
-    .news_slides li.emptymessage {
+    .news_slides .slick-slide {
+        padding: 0 5px;
+    }
+    .news_slides .emptymessage {
         padding: 50px 0;
     }
     /*------------------footer------------------*/

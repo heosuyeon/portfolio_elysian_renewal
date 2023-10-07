@@ -217,9 +217,9 @@ $(function(){
       });
     });
   }
-  if($('.swiper-slide').length > 0){
-    //좌우 방향키 스타일 통일
-    $('.swiper-button-prev').addClass('slick-prev slick-arrow');
-    $('.swiper-button-next').addClass('slick-next slick-arrow');
-  }
+  // if($('.swiper-slide').length > 0){
+  //   //좌우 방향키 스타일 통일
+  //   $('.swiper-button-prev').addClass('slick-prev slick-arrow');
+  //   $('.swiper-button-next').addClass('slick-next slick-arrow');
+  // }
 });//ready
