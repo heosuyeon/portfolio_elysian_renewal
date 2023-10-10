@@ -72,7 +72,7 @@
     }
     /*------------------news------------------*/
     .offers-wrap .img_caption h3,
-    .news .news_slides li h3 {
+    .news .news_slides h3 {
         font-size: 0.9rem; 
         line-height: 21px;     
     }

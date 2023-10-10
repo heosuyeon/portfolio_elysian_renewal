@@ -344,6 +344,9 @@
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .offers-wrap .img_caption .pri {
     color: #666;
@@ -593,21 +596,26 @@
 .news_slides .slick-slide {
     padding: 0 20px;
 }
-.news_slides .news_title {
-    height: 100px;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 .news_slides img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
+.news_slides .news_title {
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.news_slides .news_title h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
 .news_slides h3 {
     line-height: 27px;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
 }
 .news_slides p {
