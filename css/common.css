@@ -53,6 +53,7 @@ form select:focus {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
 }
 .hidden {
     visibility: hidden;
@@ -180,10 +181,7 @@ body {
     padding: 20px 25px;
     margin-top: 10px;
 }
-.sec_tt_area {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.sec_tt {
     text-align: left;
     margin-bottom: 20px;
 }
@@ -198,10 +196,13 @@ body {
     line-height: 22px;
     margin-top: 8px;
 }
-.sec_tt_area a {
-    height: 32px;
+.readmore {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(100%);
 }
-.sec_tt_area .material-icons {
+.sec_tt .material-icons {
     padding-left: 0;
     color: #666;
     font-size: 32px;

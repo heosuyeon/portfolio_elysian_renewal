@@ -505,6 +505,9 @@
     text-align: center;
     background: #f9f9f9;
 }
+.convenience .container {
+    position: relative;
+}
 .convenience_wrap img {
     width: 100%;
     height: auto;

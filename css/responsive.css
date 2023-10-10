@@ -56,6 +56,9 @@
         padding: 0 15px;
         box-sizing: border-box;
     }
+    .readmore {
+        right: 15px;
+    }
     .main_slide_wrapper .slide3 .main_content_warp {
         margin-left: 8%;
     }
