@@ -765,7 +765,8 @@ header.headerbg .gnb .logo a {
     padding: 8px 0;
     color:#333;
 }
-.gnb nav .depth2 li > a:hover{
+.gnb nav .depth2 li > a:focus,
+.gnb nav .depth2 li > a:hover {
     color:var(--turquoise-color);
 }
 .lang {
