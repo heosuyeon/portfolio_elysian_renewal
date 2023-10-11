@@ -7,6 +7,7 @@ import miniCSS from "gulp-csso";
 import bro from "gulp-bro";
 import babelify from "babelify";
 import ghPages from "gulp-gh-pages";
+import { stream as critical } from "critical";
 
 const routes = {
   html: {
@@ -70,6 +71,19 @@ const img = () =>
 const styles = () =>
   gulp.src(routes.css.src).pipe(miniCSS()).pipe(gulp.dest(routes.css.dest));
 
+// const criticalStyle = () =>
+//   gulp
+//     .src("build/index.html")
+//     .pipe(
+//       critical({
+//         base: "build/",
+//         inline: true,
+//         css: ["build/css/common.css", "build/css/main.css"],
+//         penthouse: { timeout: 60000 },
+//       })
+//     )
+//     .pipe(gulp.dest("build"));
+
 const js = () =>
   gulp
     .src(routes.js.src)
@@ -99,9 +113,21 @@ const watch = () => {
 
 const gh = () => gulp.src("build/**/*").pipe(ghPages());
 
-const prepare = gulp.series([clean, img]);
+const prepare = gulp.series([
+  clean,
+  img, // 임시 주석
+]);
 
-const assets = gulp.series([xml, txt, favicon, fonts, html, styles, js]);
+const assets = gulp.series([
+  xml,
+  txt,
+  favicon,
+  fonts,
+  html,
+  styles,
+  js,
+  // criticalStyle,
+]);
 
 // postDev는 웹 서버를 실행하고, 파일의 변동 사항을 지켜본다
 const live = gulp.parallel([webserver, watch]);
