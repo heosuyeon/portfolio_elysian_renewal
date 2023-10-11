@@ -45,9 +45,16 @@
     <!-- jquery -->
     <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
     <!-- slick -->
-    <link rel="preload" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.rel='stylesheet'"/>
+    <!-- <link rel="preload" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.rel='stylesheet'"/> -->
+    <link rel="preload" type="text/css" href="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css" as="style" onload="this.rel='stylesheet'">
+    <!-- <link rel="preload" type="text/css" href="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css" as="style" onload="this.rel='stylesheet'"> -->
+    <link rel="preload" href="css/accessible-slick-theme.min.css" as="style" onload="this.rel='stylesheet'">
     <!-- aos css -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style" onload="this.rel='stylesheet'" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- <link rel="stylesheet" href="css/critical.css"> -->
+    <!-- <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'"> -->
+    
     <link rel="stylesheet" href="css/main.css">
     <link rel="preload" href="css/responsive.css" as="style" onload="this.rel='stylesheet'">
 </head>
@@ -222,7 +229,8 @@
                     <p><em>학습 기간</em> : 2021.06.16 ~ 2021.12.08</p>
                     <p><em>제작 기간</em> : 2021.07.31 ~ 2021.9.30</p>
                     <p><em>2차 제작 기간</em> : 2022.01.03 ~ 2022.3.09</p>
-                    <p><em>핵심 목표</em> : HTML, CSS(FLEX), JQUERY, JAVASCRIPT, 라이브러리, 반응형(태블릿, 모바일)</p>
+                    <p><em>3차 제작 기간</em> : 2023.09.21 ~ 2023.10 ~</p>
+                    <p><em>핵심 목표</em> : HTML, CSS(FLEX), JQUERY, JAVASCRIPT, 라이브러리, 반응형(태블릿, 모바일), Gulp</p>
                 </div>
                 <h3 class="file"><a href="https://docs.google.com/presentation/d/1W7v398RmHak21sN9pjIv24W2uwPiC1L7/edit?usp=sharing&ouid=100456759543079574210&rtpof=true&sd=true" title="리뉴얼 기획서 바로가기" target="_blank">리뉴얼 기획서 (클릭)</a></h3>
                 <p class="pages">
@@ -258,6 +266,7 @@
                         </div>
                     </li>
                     <li class="slide2">
+                        <img src="images/main_slide_02.webp" alt="main slide image" class="display_none">  
                         <div class="main_content_warp">
                             <p>gangchon cuntry club</p>
                             <p>자연특성을 그대로 살린 수려한 경관의 27홀 아름다운 코스입니다.</p>  
@@ -265,6 +274,7 @@
                         </div>
                     </li>
                     <li class="slide3">
+                        <img src="images/main_slide_03.webp" alt="main slide image" class="display_none">  
                         <div class="main_content_warp">
                             <p>Elsuite Condominium</p>   
                             <p>강촌의 아름다운 사계를 조망하며 편안하게 머물 수 있는 낭만 가득한 콘도입니다.</p>          
@@ -272,6 +282,7 @@
                         </div>
                     </li>
                     <li class="slide4">
+                        <img src="images/main_slide_04-1.webp" alt="main slide image" class="display_none">  
                         <div class="main_content_warp">
                             <p>Ski Resort</p> 
                             <p>강촌의 지형을 살린 슬로프 설계로 짜릿한 질주본능을 만끽할 수 있고,</p>            
@@ -280,6 +291,7 @@
                         </div>
                     </li>
                     <li class="slide5">
+                        <img src="images/main_slide_05-1.webp" alt="main slide image" class="display_none" loading="lazy">  
                         <div class="main_content_warp">
                             <p>glamping place</p>
                             <p>넓은 잔디 광장과 함께 즐기는 글램핑!</p> 
@@ -289,7 +301,7 @@
                     </li>
                 </ul>
                 <p class="controls">
-                    <a href="/index.html" title="이전 슬라이드 이동" class="prev">previous slide</a>
+                    <a href="index.html" title="이전 슬라이드 이동" class="prev">previous slide</a>
                     <a href="index.html" title="다음 슬라이드 이동" class="next">next slide</a>
                 </p>
                 <div class="pager_container">
@@ -904,7 +916,8 @@
     <!-- aos js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- slick -->
-    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
 </body>
