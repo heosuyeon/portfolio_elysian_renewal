@@ -127,7 +127,7 @@ $(function () {
       header.addClass("fixed headerbg");
       header.css({ height: fixedHeight + "px" });
       $(".hamburger-btn").removeClass("active");
-      slideMenuList.find(">a").attr("onclick", `return false`);
+      // slideMenuList.find(">a").attr("onclick", `return false`);
     } else {
       // 770 이상
       if ($(window).scrollTop() > 0) {
@@ -145,7 +145,7 @@ $(function () {
       if (!$("header nav").hasClass("toggle")) {
         $("header nav .depth2").css({ display: "block" });
       }
-      slideMenuList.find(">a").attr("onclick", `return true`);
+      // slideMenuList.find(">a").attr("onclick", `return true`);
     }
   });
   $(window).trigger("resize"); // 브라우저 너비 늘리고 줄인 상태에서 새로고침시 필요

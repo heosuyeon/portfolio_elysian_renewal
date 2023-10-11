@@ -389,6 +389,7 @@
     }
     nav.toggle > ul > li > a {
         display: block;
+        pointer-events: none;
     }
     header .gnb nav > ul {
         overflow-y: scroll;
