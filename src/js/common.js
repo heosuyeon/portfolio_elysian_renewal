@@ -21,9 +21,10 @@ $(function () {
   var subMenuHeight = 0;
   var fixedHeight = 70;
   var slideMenuList = $("header nav > ul> li");
+  const isTabletOrLarger = $(window).width() > 768;
 
   $(window).scroll(function () {
-    if ($(window).width() > 768) {
+    if (isTabletOrLarger) {
       if ($(this).scrollTop() > 0) {
         // 스크롤 o
         header.addClass("fixed headerbg");
@@ -38,54 +39,65 @@ $(function () {
       }
     }
   });
+
+  function calculateSubMenuHeight() {
+    subMenu.each(function () {
+      if (subMenuHeight < $(this).outerHeight()) {
+        subMenuHeight = $(this).outerHeight();
+      }
+    });
+  }
+  function updateActiveHeaderHeight() {
+    let padding = 15;
+    if (header.hasClass("fixed")) {
+      // 스크롤 o
+      header.css({ height: fixedHeight + subMenuHeight + padding + "px" });
+    } else {
+      // 스크롤 x
+      header.css({ height: headerHeight + subMenuHeight + padding + "px" });
+    }
+  }
+  function updateInactiveHeaderHeight() {
+    if (header.hasClass("fixed")) {
+      // 스크롤 o
+      header.css({ height: fixedHeight + "px" });
+    } else {
+      header.css({ height: headerHeight + "px" });
+    }
+  }
+
   menu
     .mouseover(function () {
-      if ($(window).width() > 768) {
-        subMenu.each(function () {
-          if (subMenuHeight < $(this).outerHeight()) {
-            subMenuHeight = $(this).outerHeight();
-          }
-        });
-        let padding = 15;
+      const $this = $(this);
+      if (isTabletOrLarger) {
+        calculateSubMenuHeight();
+
         header.addClass("headerbg");
 
         $(this).addClass("active").siblings().removeClass("active");
-        if (header.hasClass("fixed")) {
-          // 스크롤 o
-          header.css({ height: fixedHeight + subMenuHeight + padding + "px" });
-        } else {
-          // 스크롤 x
-          header.css({ height: headerHeight + subMenuHeight + padding + "px" });
-        }
+
+        updateActiveHeaderHeight();
       }
     })
     .mouseout(function () {
       if (
-        $(window).width() > 768 &&
+        isTabletOrLarger &&
         $(window).scrollTop() == 0 &&
         header.hasClass("default_header")
       ) {
         header.removeClass("headerbg");
       }
       $(this).removeClass("active");
-      if (header.hasClass("fixed")) {
-        // 스크롤 o
-        header.css({ height: fixedHeight + "px" });
-      } else {
-        header.css({ height: headerHeight + "px" });
-      }
+
+      updateInactiveHeaderHeight();
     });
 
   menu
     .find("a")
     .focus(function () {
-      if ($(window).width() > 768) {
-        subMenu.each(function () {
-          if (subMenuHeight < $(this).outerHeight()) {
-            subMenuHeight = $(this).outerHeight();
-          }
-        });
-        let padding = 15;
+      if (isTabletOrLarger) {
+        calculateSubMenuHeight();
+
         header.addClass("headerbg");
 
         $(this)
@@ -93,30 +105,21 @@ $(function () {
           .addClass("active")
           .siblings()
           .removeClass("active");
-        if (header.hasClass("fixed")) {
-          // 스크롤 o
-          header.css({ height: fixedHeight + subMenuHeight + padding + "px" });
-        } else {
-          // 스크롤 x
-          header.css({ height: headerHeight + subMenuHeight + padding + "px" });
-        }
+
+        updateActiveHeaderHeight();
       }
     })
     .blur(function () {
       if (
-        $(window).width() > 768 &&
+        isTabletOrLarger &&
         $(window).scrollTop() == 0 &&
         header.hasClass("default_header")
       ) {
         header.removeClass("headerbg");
       }
       $(this).parent("li").removeClass("active");
-      if (header.hasClass("fixed")) {
-        // 스크롤 o
-        header.css({ height: fixedHeight + "px" });
-      } else {
-        header.css({ height: headerHeight + "px" });
-      }
+
+      updateInactiveHeaderHeight();
     });
   /*----------------리사이즈---------------*/
   $(window).resize(function () {
