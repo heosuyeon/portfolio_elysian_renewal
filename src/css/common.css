@@ -18,6 +18,8 @@ li {
 }
 img {
     vertical-align: top;
+    width: 100%;
+    height: auto;
 }
 button,
 select,
@@ -323,6 +325,9 @@ body {
     padding: 10px 20px;
     color: #fff;
 }
+.modal .modal_contents img {
+    aspect-ratio: 1.95/1;
+}
 .modal.active {
     display: block;
 }
@@ -426,7 +431,7 @@ footer a {
     align-items: center;
     width: 100%;
 }
-.quick_title h3 {
+.quick_title h2 {
     font-size: 32px;
     font-weight: bold;
 }

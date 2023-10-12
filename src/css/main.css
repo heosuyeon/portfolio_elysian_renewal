@@ -2,7 +2,6 @@
 /*----------------------------cookie popup----------------------------*/
 .popup {
     position: fixed;
-    left: 10%;
     top: 100px;
     width: 500px;
     border: 2px solid var(--turquoise-color);
@@ -11,8 +10,9 @@
     color: #222;
     line-height: 22px;
     font-size: 14px;
+    padding: 0;
 }
-.popup > div:not(.close_area) {
+.popup > div:first-child {
     padding: 30px 20px 20px;
 }
 .popup .content,
@@ -308,6 +308,65 @@
 .horizontal_wrap li:hover .caption_up p{
     margin-top: 15px;
 }
+/*----------------convenience---------------*/
+.convenience {
+    text-align: center;
+    background: #f9f9f9;
+}
+.convenience .container {
+    position: relative;
+}
+.convenience_wrap img {
+    aspect-ratio: 1/0.575;
+}
+.convenience_wrap ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.convenience_wrap li { 
+    width: 400px;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+.convenience_wrap li a {
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+}
+.convenience_wrap li div p {
+    margin-top: 15px;
+    color: rgb(80, 78, 78);
+    font-size: 14px;
+    line-height: 24px;
+}
+.convenience_wrap li h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+.convenience_wrap li:nth-child(odd) {
+    background-color: #fff;
+}
+.convenience_wrap li:nth-child(odd) a {
+    padding: 30px;
+}
+.convenience_wrap li:nth-child(odd):after {
+    content: '';
+    border-style: solid;
+    border-width: 20px;
+    border-color: #fff transparent transparent transparent ;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.convenience_wrap li:nth-child(5):after {
+    top: 0;
+    transform: translate(-50%,-100%);
+    border-color: transparent transparent #fff transparent;
+}
 /*----------------------------offers----------------------------*/
 .offers .container,
 .news .container {
@@ -324,8 +383,7 @@
     border-left: 1px solid transparent;
 }
 .offers .slick-slide img {
-    width: 100%;
-    height: inherit;
+    aspect-ratio:  1.132375/1;
     transition: .4s;
 }
 .offers-wrap figure {
@@ -502,66 +560,6 @@
 .table li:hover strong {
     color: #fff;
 }
-/*----------------convenience---------------*/
-.convenience {
-    text-align: center;
-    background: #f9f9f9;
-}
-.convenience .container {
-    position: relative;
-}
-.convenience_wrap img {
-    width: 100%;
-    height: auto;
-}
-.convenience_wrap ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.convenience_wrap li { 
-    width: 400px;
-    height: auto;
-    position: relative;
-    box-sizing: border-box;
-}
-.convenience_wrap li a {
-    display: block;
-    height: 100%;
-    box-sizing: border-box;
-}
-.convenience_wrap li div p {
-    margin-top: 15px;
-    color: rgb(80, 78, 78);
-    font-size: 14px;
-    line-height: 24px;
-}
-.convenience_wrap li h3 {
-    font-size: 28px;
-    font-weight: bold;
-}
-.convenience_wrap li:nth-child(odd) {
-    background-color: #fff;
-}
-.convenience_wrap li:nth-child(odd) a {
-    padding: 30px;
-}
-.convenience_wrap li:nth-child(odd):after {
-    content: '';
-    border-style: solid;
-    border-width: 20px;
-    border-color: #fff transparent transparent transparent ;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-.convenience_wrap li:nth-child(5):after {
-    top: 0;
-    transform: translate(-50%,-100%);
-    border-color: transparent transparent #fff transparent;
-}
 /*----------------news---------------*/
 .news .controls {
     display: flex;
@@ -602,8 +600,7 @@
     padding: 0 20px;
 }
 .news_slides img {
-    width: 100%;
-    height: auto;
+    aspect-ratio: 1.48/1;
     object-fit: cover;
 }
 .news_slides .news_title {
