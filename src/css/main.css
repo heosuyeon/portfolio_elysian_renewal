@@ -1,9 +1,9 @@
-@import url(common.css);
+/* @import url(common.css); */
 /*----------------------------cookie popup----------------------------*/
 .popup {
     position: fixed;
-    top: 100px;
-    width: 500px;
+    top: 30px;
+    width: 360px;
     border: 2px solid var(--turquoise-color);
     z-index: 7778;
     background: #fff;
@@ -77,19 +77,19 @@
     background: rgba(0,0,0,.2);
 }
 .main_slide_wrapper .main_slides .slide1 {
-    background-image: url('../images/main_slide_01.webp');
+    /* background-image: url('../images/main_slide_01.webp'); */
 }
 .main_slide_wrapper .main_slides .slide2 {
-    background-image: url('../images/main_slide_02.webp');
+    /* background-image: url('../images/main_slide_02.webp'); */
 }
 .main_slide_wrapper .main_slides .slide3 {
-    background-image: url('../images/main_slide_03.webp');
+    /* background-image: url('../images/main_slide_03.webp'); */
 }
 .main_slide_wrapper .main_slides .slide4 {
-    background-image: url('../images/main_slide_04-1.webp');
+    /* background-image: url('../images/main_slide_04-1.webp'); */
 }
 .main_slide_wrapper .main_slides .slide5 {
-    background-image: url('../images/main_slide_05-1.webp');
+    /* background-image: url('../images/main_slide_05-1.webp'); */
 }
 .main_slide_wrapper .slide1 .main_content_warp {
     text-align: left;

@@ -71,18 +71,24 @@ const img = () =>
 const styles = () =>
   gulp.src(routes.css.src).pipe(miniCSS()).pipe(gulp.dest(routes.css.dest));
 
-// const criticalStyle = () =>
-//   gulp
-//     .src("build/index.html")
-//     .pipe(
-//       critical({
-//         base: "build/",
-//         inline: true,
-//         css: ["build/css/common.css", "build/css/main.css"],
-//         penthouse: { timeout: 60000 },
-//       })
-//     )
-//     .pipe(gulp.dest("build"));
+const criticalStyle = () =>
+  gulp
+    .src("build/index.html")
+    .pipe(
+      critical({
+        base: "build/",
+        inline: true,
+        css: [
+          "build/css/normalize.css",
+          "build/css/reset.css",
+          "build/css/common.css",
+          "build/css/main.css",
+          "build/css/responsive.css",
+        ],
+        penthouse: { timeout: 60000 },
+      })
+    )
+    .pipe(gulp.dest("build"));
 
 const js = () =>
   gulp
@@ -126,7 +132,7 @@ const assets = gulp.series([
   html,
   styles,
   js,
-  // criticalStyle,
+  criticalStyle,
 ]);
 
 // postDev는 웹 서버를 실행하고, 파일의 변동 사항을 지켜본다
