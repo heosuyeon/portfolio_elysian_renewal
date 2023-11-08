@@ -119,10 +119,7 @@ const watch = () => {
 
 const gh = () => gulp.src("build/**/*").pipe(ghPages());
 
-const prepare = gulp.series([
-  clean,
-  img, // 임시 주석
-]);
+const prepare = gulp.series([clean, img]);
 
 const assets = gulp.series([
   xml,
@@ -135,7 +132,7 @@ const assets = gulp.series([
   criticalStyle,
 ]);
 
-// postDev는 웹 서버를 실행하고, 파일의 변동 사항을 지켜본다
+// live는 웹 서버를 실행하고, 파일의 변동 사항을 지켜본다
 const live = gulp.parallel([webserver, watch]);
 
 export const build = gulp.series([prepare, assets]);
