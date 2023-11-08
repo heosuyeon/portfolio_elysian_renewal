@@ -3,7 +3,7 @@
 .popup {
     position: fixed;
     top: 30px;
-    width: 360px;
+    width: 400px;
     border: 2px solid var(--turquoise-color);
     z-index: 7778;
     background: #fff;
@@ -11,6 +11,9 @@
     line-height: 22px;
     font-size: 14px;
     padding: 0;
+}
+.popup::backdrop {
+    background-color: rgba(0,0,0,.5);
 }
 .popup > div:first-child {
     padding: 30px 20px 20px;
@@ -65,7 +68,11 @@
     height: 100%; 
     width: 100%; 
     background: no-repeat 50% 0 / cover; 
-    display: none;
+    /* display: none; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main_slide_wrapper .main_slides li:before {
     content: '';
@@ -75,6 +82,11 @@
     top: 0;
     bottom: 0;
     background: rgba(0,0,0,.2);
+}
+.main_slide_wrapper .main_slides li img {
+    aspect-ratio: 15/7;
+    height: 100%;
+    width: auto;
 }
 .main_slide_wrapper .main_slides .slide1 {
     /* background-image: url('../images/main_slide_01.webp'); */
