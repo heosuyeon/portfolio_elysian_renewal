@@ -778,6 +778,8 @@ header.headerbg .gnb .logo a {
     position: relative;
     display: flex;
     align-items: center;
+    width: 98px;
+    overflow: hidden;
 }
 .lang span:first-child {
     font-size: 20px;
