@@ -84,9 +84,9 @@
     background: rgba(0,0,0,.2);
 }
 .main_slide_wrapper .main_slides li img {
-    aspect-ratio: 15/7;
-    height: 100%;
-    width: auto;
+    aspect-ratio: 2.235/1;
+    width: 100%;
+    object-fit: cover;
 }
 .main_slide_wrapper .main_slides .slide1 {
     /* background-image: url('../images/main_slide_01.webp'); */
