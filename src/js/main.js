@@ -78,14 +78,16 @@ $(function () {
     pager.append(`<a href="/index.html">${idx}</a>`);
   });
 
+  //다음 슬라이드
   function showNextSlide(params) {
-    console.log("showNextSlide");
     if (slideCurrentIdx != mainSlideCount - 1) {
       showSlide(slideCurrentIdx + 1);
     } else {
       showSlide(0);
     }
   }
+
+  //이전 슬라이드
   function showPrevSlide(params) {
     if (slideCurrentIdx != 0) {
       showSlide(slideCurrentIdx - 1);
@@ -94,10 +96,9 @@ $(function () {
     }
   }
 
-  //타이머
+  //자동 슬라이드
   function autoSlide() {
-    clearInterval(autoTimer);
-    console.log("autoSlide");
+    clearInterval(autoTimer); //초기화
     autoTimer = setInterval(function () {
       showNextSlide();
     }, intervalTimer);
@@ -115,7 +116,7 @@ $(function () {
     }
   });
 
-  //좌우 버튼 클릭 슬라이드 이동하기
+  //좌우 버튼 클릭 시 슬라이드 이동하기
   nextBtn.click(function (e) {
     e.preventDefault();
     let isSlideAutomode = pauseBtn.hasClass("active");
@@ -133,6 +134,7 @@ $(function () {
     }
   });
 
+  //idx params 받아서 슬라이드 보여주기
   function showSlide(idx) {
     mainSlide.eq(idx).fadeIn(1000).siblings().fadeOut(1200);
     slideCurrentIdx = idx;
