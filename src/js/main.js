@@ -189,7 +189,7 @@ $(function () {
     autoplaySpeed: 5000,
     pauseOnHover: true,
     dots: true,
-    infinite: false,
+    infinite: true,
     responsive: [
       {
         breakpoint: 768,
