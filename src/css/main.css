@@ -65,14 +65,20 @@
 .main_slide_wrapper .main_slides li {
     position: absolute;
     left: 0;
-    height: 100%; 
-    width: 100%; 
-    background: no-repeat 50% 0 / cover; 
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* height: 100%;  */
+    /* width: 100%;  */
+    /* background: no-repeat 50% 0 / cover;  */
     /* display: none; */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.main_slide_wrapper .main_slides li:not(:first-child){
+    display: none;
 }
 .main_slide_wrapper .main_slides li:before {
     content: '';
