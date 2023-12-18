@@ -64,88 +64,98 @@ $(function () {
     mainSlide = mainSlideWrapper.find("li"),
     mainSlideCount = mainSlide.length,
     autoTimer,
-    mainCurrentIdx = 0,
+    slideCurrentIdx = 0,
     intervalTimer = 5000,
     pager = mainSlideWrapper.find(".pager"),
     nextBtn = mainSlideWrapper.find(".next"),
     prevBtn = mainSlideWrapper.find(".prev"),
     controlBtn = mainSlideWrapper.find("button"),
-    pauseBtn = mainSlideWrapper.find(".pause"),
-    replayBtn = mainSlideWrapper.find(".replay");
+    pauseBtn = mainSlideWrapper.find(".pause");
+  // mainSlide.eq(0).fadeIn();
 
-  mainSlide.eq(0).fadeIn();
   //pager 생성
   mainSlide.each(function (idx) {
     pager.append(`<a href="/index.html">${idx}</a>`);
   });
 
+  function showNextSlide(params) {
+    console.log("showNextSlide");
+    if (slideCurrentIdx != mainSlideCount - 1) {
+      showSlide(slideCurrentIdx + 1);
+    } else {
+      showSlide(0);
+    }
+  }
+  function showPrevSlide(params) {
+    if (slideCurrentIdx != 0) {
+      showSlide(slideCurrentIdx - 1);
+    } else {
+      showSlide(mainSlideCount - 1);
+    }
+  }
+
   //타이머
   function autoSlide() {
+    clearInterval(autoTimer);
+    console.log("autoSlide");
     autoTimer = setInterval(function () {
-      if (mainCurrentIdx != mainSlideCount - 1) {
-        showNextSlide(mainCurrentIdx + 1);
-      } else {
-        showNextSlide(0);
-      }
+      showNextSlide();
     }, intervalTimer);
   }
 
   //pager 클릭 슬라이드 이동
   pager.find("a").click(function (e) {
     e.preventDefault();
-    clearInterval(autoTimer);
-    var targetIdx = $(this).index();
-    showNextSlide(targetIdx);
-    if (pauseBtn.hasClass("active")) {
+    let targetIdx = $(this).index();
+    showSlide(targetIdx);
+
+    let isSlideAutomode = pauseBtn.hasClass("active");
+    if (isSlideAutomode) {
       autoSlide();
     }
   });
-  pager.find("a").eq(0).trigger("click");
 
-  function showNextSlide(idx) {
-    mainSlide.eq(idx).fadeIn(1000).siblings().fadeOut(1200);
-    mainCurrentIdx = idx;
-    pager
-      .find("a")
-      .eq(mainCurrentIdx)
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
-    // console.log('mainCurrentIdx :', mainCurrentIdx);
-  }
   //좌우 버튼 클릭 슬라이드 이동하기
   nextBtn.click(function (e) {
     e.preventDefault();
-    clearInterval(autoTimer);
-    if (mainCurrentIdx != mainSlideCount - 1) {
-      showNextSlide(mainCurrentIdx + 1);
-    } else {
-      showNextSlide(0);
-    }
-    if (pauseBtn.hasClass("active")) {
+    let isSlideAutomode = pauseBtn.hasClass("active");
+    showNextSlide();
+    if (isSlideAutomode) {
       autoSlide();
     }
   });
   prevBtn.click(function (e) {
     e.preventDefault();
-    if (mainCurrentIdx != 0) {
-      showNextSlide(mainCurrentIdx - 1);
-    } else {
-      showNextSlide(mainSlideCount - 1);
-    }
-    if (pauseBtn.hasClass("active")) {
+    let isSlideAutomode = pauseBtn.hasClass("active");
+    showPrevSlide();
+    if (isSlideAutomode) {
       autoSlide();
     }
   });
+
+  function showSlide(idx) {
+    mainSlide.eq(idx).fadeIn(1000).siblings().fadeOut(1200);
+    slideCurrentIdx = idx;
+    pager
+      .find("a")
+      .eq(slideCurrentIdx)
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+  }
+
   //자동 슬라이드 멈추기, 다시 재생 하기
   controlBtn.click(function () {
     $(this).removeClass("active").siblings().addClass("active");
-    if (replayBtn.hasClass("active")) {
-      clearInterval(autoTimer);
-    } else {
+    let isSlideAutomode = pauseBtn.hasClass("active");
+    if (isSlideAutomode) {
       autoSlide();
+    } else {
+      clearInterval(autoTimer);
     }
   });
+
+  pager.find("a").eq(0).trigger("click");
   /*----------------메인 비지니스---------------*/
   var BusiLi = $(".horizontal_wrap li"),
     fullImg = $(".full_bg_wrap > div"),
