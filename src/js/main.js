@@ -221,11 +221,11 @@ $(function () {
     restDesc = $(".restaurant_wrap .rest_desc"),
     restDescText = restDesc.html();
 
-  links.each(function () {
-    var img = new Image();
-    var imgSrc = $(this).find("a").attr("data-bg");
-    img.src = imgSrc;
-  });
+  // links.each(function () {
+  //   var img = new Image();
+  //   var imgSrc = $(this).find("a").attr("data-bg");
+  //   img.src = imgSrc;
+  // });
   links
     .mouseenter(function () {
       if ($(window).width() > 768) {
@@ -245,25 +245,6 @@ $(function () {
   let newsSlides = $(".news_slides");
   const newsSlidesItem = newsSlides.find("> .swiper-slide");
   const noResult = newsSlides.find("> .emptymessage");
-
-  // var swiper = new Swiper(".mySwiper", {
-  //   a11y:{
-  //     slideRole: 'listitem',
-  //   },
-  //   slidesPerView: 2,
-  //   spaceBetween: 20,
-  //   allowTouchMove:false,
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
-  //   breakpoints: {
-  //     640: { //640 이상
-  //       slidesPerView: 3,
-  //       spaceBetween: 30,
-  //     }
-  //   }
-  // });
 
   newsSlides.slick({
     slidesToShow: 3,
