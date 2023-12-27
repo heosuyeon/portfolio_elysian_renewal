@@ -41,8 +41,9 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- material icons -->
     <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.rel = 'stylesheet'"> 
-    <!-- swiper css -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+    <link rel="stylesheet" href="css/accessible-slick-theme.min.css">
     <link rel="preload" href="css/normalize.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="css/reset.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="css/common.css" as="style" onload="this.rel='stylesheet'">
@@ -269,62 +270,56 @@
             </div>
         </section>
         <section>
-            <div class="container">
+            <div class="container rental_slide">
                 <div class="info_title_area">
                     <h2>렌탈안내</h2>
                     <p>최신장비를 갖춘 엘리시안 강촌의 원스톱 렌탈 서비스! 이제 비싸고 무거운 장비 없이 가볍게 겨울을 즐겨보세요.</p>
                 </div>
-                <!-- Swiper -->
-                <div class="swiper swiperBig mySwiper2">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide01_sgxsjp.jpg" alt="스키렌탈 프론트">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide02_f1d8ep.jpg" alt="스키렌탈 프리미엄웨어">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide03_aahcwc.jpg" alt="스키렌탈 스키장비">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide04_wtitaz.jpg" alt="스키복 살균건조실">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide05_frcqbw.jpg" alt="스키복 살균건조실">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide06_u0uo2n.jpg" alt="스키복 살균건조실">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide07_ivjyzr.jpg" alt="스키복 살균건조실">
-                        </div>
+                <div class="slider slider-for">
+                    <div>
+                        <img src="images/rental_guide01.jpg" width="900" height="450" alt="스키렌탈 프론트">
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div>
+                        <img src="images/rental_guide02.jpg" width="900" height="450" alt="스키렌탈 프리미엄웨어">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide03.jpg" width="900" height="450" alt="스키렌탈 스키장비">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide04.jpg" width="900" height="450" alt="스키렌탈 살균건조실">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide05.jpg" width="900" height="450" alt="스키렌탈 살균건조실">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide06.jpg" width="900" height="450" alt="스키렌탈 살균건조실">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide07.jpg" width="900" height="450" alt="스키렌탈 살균건조실">
+                    </div>
                 </div>
-                <div class="swiper swiperThumb mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide01_sgxsjp.jpg" alt="스키렌탈 프론트">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide02_f1d8ep.jpg" alt="스키렌탈 프리미엄웨어">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide03_aahcwc.jpg" alt="스키렌탈 스키장비">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide04_wtitaz.jpg" alt="스키복 살균건조실">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide05_frcqbw.jpg" alt="스키복 살균건조실">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide06_u0uo2n.jpg" alt="스키복 살균건조실">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://res.cloudinary.com/suyeon/image/upload/v1649053131/images/rental_guide07_ivjyzr.jpg" alt="스키복 살균건조실">
-                        </div>
+          
+                <div class="slider slider-nav">
+                    <div>
+                        <img src="images/rental_guide01.jpg" width="900" height="450" alt="스키렌탈 프론트">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide02.jpg" width="900" height="450" alt="스키렌탈 프리미엄웨어">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide03.jpg" width="900" height="450" alt="스키렌탈 스키장비">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide04.jpg" width="900" height="450" alt="스키렌탈 살균건조실">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide05.jpg" width="900" height="450" alt="스키렌탈 살균건조실">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide06.jpg" width="900" height="450" alt="스키렌탈 살균건조실">
+                    </div>
+                    <div>
+                        <img src="images/rental_guide07.jpg" width="900" height="450" alt="스키렌탈 살균건조실">
                     </div>
                 </div>
                 <button class="short-cut short-cut-gray show_modal" data-modal=".rentalmap">위치보기</button>
@@ -634,9 +629,10 @@
             </div>
         </section>
     </footer>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- slick -->
+    <script src="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/ski.js"></script>
 </body>

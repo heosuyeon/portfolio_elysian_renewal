@@ -1,4 +1,4 @@
-@import url(common.css);
+/* @import url(common.css); */
 /*----------------------------ski main bg----------------------------*/
 .main_bg_wrap {
     position: relative;
@@ -413,52 +413,16 @@
     margin: 0 auto;
 }   
 /*------------------렌탈안내------------------*/
-/* ------ swiper ------ */
-.swiper {
+/* ------ slick ------ */
+.rental_slide .slider {
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-}
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-}   
-.swiperBig {
-    --swiper-navigation-color: #fff;
-    --swiper-pagination-color: #fff;
-}
-.swiperThumb {
-    box-sizing: border-box;
-    padding: 10px 0;
-}
-.swiperThumb .swiper-slide {
-    width: 25%;
+.rental_slide .slider-nav .slick-slide {
     opacity: 0.4;
 }
-.swiperThumb .swiper-slide-thumb-active {
-  opacity: 1;
+.rental_slide .slider-nav .slick-slide.slick-current {
+    opacity: 1;
 }
 /*------------------스키학교------------------*/
 #mentor {

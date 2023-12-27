@@ -36,24 +36,33 @@ if ($(".grid").length > 0) {
     ],
   });
 }
-if ($(".swiper-slide").length > 0) {
-  var swiper = new Swiper(".mySwiper", {
-    //ski_rental.html
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
+if ($(".rental_slide").length > 0) {
+  $(".slider-for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: ".slider-nav",
+    instructionsText:
+      "Changing this current slide of this carousel will change the current slide of the thumbnail carousel that follows.",
+    regionLabel: "main image carousel",
   });
-  var swiper2 = new Swiper(".mySwiper2", {
-    //ski_rental.html
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
+  $(".slider-nav").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: ".slider-for",
+    // dots: true,
+    instructionsText:
+      "Changing the current slide of this carousel will change the current slide of the preceding main image carousel.",
+    regionLabel: "thumbnail carousel",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   });
 }
 if ($(".ski_info_page").length > 0) {
