@@ -116,6 +116,9 @@
     left: 0;
     top: -90%;
 }
+.ski_features img {
+    width: auto;
+}
 .ski_features li > div p {
     font-size: 15px;
     line-height: 24px;
@@ -222,6 +225,9 @@
     background: #fbf8ef;
     text-align: center;
     box-sizing: border-box;
+}
+.gallery .readmore {
+    transform: translateY(0);
 }
 .dark .gallery {
     background: #333;
@@ -359,6 +365,7 @@
 }
 .progress_wrap > div img { 
     height: 100px;
+    width: auto;
 }
 .progress_wrap .short-cut {
     color: #999;
@@ -459,6 +466,7 @@
 }
 #mentor img {
     object-fit: cover;
+    width: auto;
 }
 #mentor .table_desc {
     margin-top: 0;
@@ -477,7 +485,8 @@
 .curriculum .p_wrap {
     margin: 30px 0 30px;
 }
-.curriculum .p_wrap img{
+.curriculum .p_wrap img {
+    width: auto;
     display: block;
     margin: 0 auto;
 } 

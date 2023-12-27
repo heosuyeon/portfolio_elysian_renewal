@@ -32,40 +32,20 @@
     <meta property="og:url" content="https://heosuyeon.github.io/portfolio_elysian_renewal/ski_info.html"/>
     <meta property="og:image" content="https://heosuyeon.github.io/portfolio_elysian_renewal/images/opengraph_icon.png"/>
     <meta property="og:description" content="4계절 가족 휴양지 엘리시안 리조트 리뉴얼 개인 포트폴리오 입니다."/>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGQ8NT637G"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-SGQ8NT637G');
+        window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-SGQ8NT637G');
     </script>
     <!-- modernizr -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>   
-        // Passive event listeners
-        jQuery.event.special.touchstart = {
-            setup: function( _, ns, handle ) {
-                this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
-            }
-        };
-        jQuery.event.special.touchmove = {
-            setup: function( _, ns, handle ) {
-                this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
-            }
-        };
-    </script>
-    <!-- retina js -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/2.1.3/retina.min.js" integrity="sha512-9RcSZpXlWiAq12BM82QI0qRtusQJonuUZ/h/bZl+Cd6O4Pw7UnGV6gnCcS5wV03/zvLwCeL3enaUa0RPy+VM2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- material icons -->
     <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.rel = 'stylesheet'">
-    
-    <link rel="stylesheet" href="css/ski.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/common.js"></script>
-    <script defer src="js/ski.js"></script>
+    <link rel="preload" href="css/normalize.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="css/reset.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="css/common.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="css/ski.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="css/responsive.css" as="style" onload="this.rel='stylesheet'">  
 </head>
 <body>
     <header class="default_header"> 
@@ -73,17 +53,18 @@
             <div class="container">          
                 <div class="service">
                     <ul class="service-ul">
-                        <li><a href="./index.html" title="엘리시안 소개">엘리시안 소개</a></li>
-                        <li><a href="./index.html" title="엘리시안 제주 바로가기">엘리시안 제주 바로가기</a></li>
-                        <li><a href="signin.html" title="로그인">로그인</a></li>
-                        <li><a href="signup.html" title="회원가입">회원가입</a></li>
-                        <li><a href="./index.html" title="예약조회">예약조회</a></li>
+                        <li><a href="./index.html">엘리시안 소개</a></li>
+                        <li><a href="./index.html">엘리시안 제주 바로가기</a></li>
+                        <li><a href="signin.html">로그인</a></li>
+                        <li><a href="signup.html">회원가입</a></li>
+                        <li><a href="./index.html">예약조회</a></li>
                         <li>
                             <button title="키워드 검색" class="sprite search">검색</button>
                         </li>
                     </ul>
                     <div class="lang">
                         <span class="material-icons">language</span>
+                        <label for="change-lag" class="hidden">change language</label>
                         <select name="change_language" id="change-lag">
                             <option value="kr">한국어</option>
                             <option value="en">English</option>
@@ -102,33 +83,33 @@
                     </div>
                 </div>
                 <div class="gnb">
-                    <h1 class="logo"><a href="index.html">엘리시안 리조트</a></h1>
+                    <h1 class="logo"><a href="./index.html">엘리시안 리조트</a></h1>
                     <nav>
                         <div class="slide_menu_top">
                             <div>
-                                <a href="./index.html" title="엘리시안 제주 바로 가기">엘리시안 제주 바로 가기</a>
+                                <a href="./index.html">엘리시안 제주 바로 가기</a>
                                 <div>
                                     <p>
                                         환영합니다.<br>
-                                        <a href="signin.html" title="로그인">로그인 해주세요 &rsaquo;</a>
+                                        <a href="signin.html">로그인 해주세요 &rsaquo;</a>
                                     </p>
                                     <p class="join">
-                                        <a href="signup.html" title="회원가입">회원가입</a>
+                                        <a href="signup.html">회원가입</a>
                                     </p>
                                 </div>
                             </div>
                             <ul class="member">
                                 <li>
-                                    <a href="./index.html" title="예약조회">예약조회</a>
+                                    <a href="./index.html">예약조회</a>
                                 </li>
                                 <li>
-                                    <a href="./index.html" title="이용권 구매">이용권 구매</a>
+                                    <a href="./index.html">이용권 구매</a>
                                 </li>
                             </ul>
                         </div>
                         <ul>
                             <li>
-                                <a href="./index.html" title="골프">골프</a>
+                                <a href="./index.html">골프</a>
                                 <ul class="depth2">
                                     <li>강촌컨트리클럽</li>
                                     <li>퍼블릭골프클럽</li>
@@ -138,7 +119,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="./index.html" title="콘도">콘도</a>
+                                <a href="./index.html">콘도</a>
                                 <ul class="depth2">
                                     <li>이용안내</li>
                                     <li>이용요금</li>
@@ -148,30 +129,30 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="ski.html" title="스키">스키</a>
+                                <a href="ski.html">스키</a>
                                 <ul class="depth2">                                  
                                     <li>
-                                        <a href="ski_info.html" title="이용안내">이용안내</a>
+                                        <a href="ski_info.html">이용안내</a>
                                     </li>                                    
                                     <li>
-                                        <a href="ski_price.html" title="이용요금">이용요금</a>
+                                        <a href="ski_price.html">이용요금</a>
                                     </li>
                                     <li>
-                                        <a href="ski_slope.html" title="슬로프안내">슬로프안내</a>
+                                        <a href="ski_slope.html">슬로프안내</a>
                                     </li>                                    
                                     <li>
-                                        <a href="ski_rental.html" title="렌탈안내">렌탈안내</a>
+                                        <a href="ski_rental.html">렌탈안내</a>
                                     </li>
                                     <li>스키보관소</li>
                                     <li>
-                                        <a href="ski_school.html" title="스키학교">스키학교</a>
+                                        <a href="ski_school.html">스키학교</a>
                                     </li>
                                     <li>스노우힐&펀파크</li>
                                     <li>현장스케치</li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="./index.html" title="부대시설">부대시설</a>
+                                <a href="./index.html">부대시설</a>
                                 <ul class="depth2">
                                     <li>식음시설</li>
                                     <li>부대시설</li>
@@ -182,7 +163,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="./index.html" title="세미나, 웨딩">세미나&amp;웨딩</a>
+                                <a href="./index.html">세미나&amp;웨딩</a>
                                 <ul class="depth2">
                                     <li>단체/행사안내</li>             
                                     <li>세미나룸</li>
@@ -191,18 +172,18 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="./index.html" title="스페셜오퍼">스페셜오퍼</a>
+                                <a href="./index.html">스페셜오퍼</a>
                                 <ul class="depth2">
                                     <li>티켓구매</li>
                                     <li>구매확인/취소</li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="./index.html" title="고객센터">고객센터</a>
+                                <a href="./index.html">고객센터</a>
                                 <ul class="depth2">
                                     <li>전화번호 안내</li>
                                     <li>
-                                        <a href="news.html" title="공지사항">공지사항</a>
+                                        <a href="news.html">공지사항</a>
                                     </li>
                                     <li>자주묻는질문</li>
                                     <li>고객의소리</li>
@@ -238,7 +219,7 @@
             <div class="location_wrap container">
                 <ul class="bread_crumbs">
                     <li>
-                        <a href="index.html" title="home">
+                        <a href="./index.html">
                             <div class="sprite home">home</div>
                         </a>
                     </li>
@@ -258,20 +239,20 @@
                     <li data-guide="info">이용안내<span class="material-icons">arrow_drop_down</span>
                         <ul class="bc_depth2">
                             <li class="activation" data-guide="info">
-                                <a href="ski_info.html" title="이용안내">이용안내</a>
+                                <a href="ski_info.html">이용안내</a>
                             </li>
                             <li class="activation" data-guide="price">
-                                <a href="ski_price.html" title="이용요금">이용요금</a>
+                                <a href="ski_price.html">이용요금</a>
                             </li>
                             <li class="activation" data-guide="slope">
-                                <a href="ski_slope.html" title="슬로프안내">슬로프안내</a>
+                                <a href="ski_slope.html">슬로프안내</a>
                             </li>
                             <li class="activation" data-guide="rent">
-                                <a href="ski_rental.html" title="렌탈안내">렌탈안내</a>
+                                <a href="ski_rental.html">렌탈안내</a>
                             </li>
                             <li data-guide="locker">스키보관소</li>
                             <li class="activation" data-guide="school">
-                                <a href="ski_school.html" title="스키학교">스키학교</a>
+                                <a href="ski_school.html">스키학교</a>
                             </li>
                             <li data-guide="snowhill">스노우힐&amp;펀파크</li>
                             <li data-guide="gallery">현장스케치</li>
@@ -292,45 +273,45 @@
                 </div>
                 <div class="progress_wrap innerpd">
                     <div>
-                        <img src="images/step1_resort.png" alt="1. 리조트 도착" data-rjs="2">
+                        <img src="images/step1_resort.png" width="102" height="100" alt="1. 리조트 도착" data-rjs="2">
                         <h4><span>step 1</span>리조트 도착</h4>
                         <div>
                             <p>초&middot;중급자 맞춤형 스키장 엘리시안 강촌에서 더 즐겁고 더 안전하세 타세요.</p>
                             <div>
-                                <a href="ski_slope.html#tabs-1" title="슬로프맵" class="short-cut">슬로프맵</a>
-                                <a href="ski_school.html" title="강습안내" class="short-cut">강습안내</a>
+                                <a href="ski_slope.html#tabs-1" class="short-cut">슬로프맵</a>
+                                <a href="ski_school.html" class="short-cut">강습안내</a>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <img src="images/step2_ski-pass.png" alt="2. 리프트 및 렌탈권 구입" data-rjs="2">
+                        <img src="images/step2_ski-pass.png" width="72" height="100" alt="2. 리프트 및 렌탈권 구입" data-rjs="2">
                         <h4><span>step 2</span>리프트 및 렌탈권 구입</h4>
                         <div>
                             <p>매표소에서 리프트 이용권을 구매하세요. 국내 최초 스마트 요금제 도입으로 원하는 시간에 이용이 가능합니다.</p>
                         </div>
                     </div>
                     <div>
-                        <img src="images/step3_ski.png" alt="3. 장비렌탈" data-rjs="2">
+                        <img src="images/step3_ski.png" width="100" height="100" alt="3. 장비렌탈" data-rjs="2">
                         <h4><span>step 3</span>장비렌탈</h4>
                         <div>
                             <p>렌탈권 구매 후 스키하우스 매표소 오른쪽에 있는 입구로 가주세요. 첼린지 하우스는 매표소 오른쪽으로 가신 뒤 스노우 가든 쪽으로 직진 해주세요.</p>
-                            <a href="ski_rental.html" title="렌탈안내" class="short-cut">렌탈안내</a>
+                            <a href="ski_rental.html" class="short-cut">렌탈안내</a>
                         </div>
                     </div>
                     <div>
-                        <img src="images/step4_skier.png" alt="4. 장비착용" data-rjs="2">
+                        <img src="images/step4_skier.png" width="100" height="100" alt="4. 장비착용" data-rjs="2">
                         <h4><span>step 4</span>장비착용</h4>
                         <div>
                             <p>장비 수령 후 물품락카 앞 의자에 앉아 착용바랍니다.</p>
-                            <a href="./index.html" title="착용방법" class="short-cut">착용방법</a>
+                            <a href="./index.html" class="short-cut">착용방법</a>
                         </div>
                     </div>
                     <div>
-                        <img src="images/step5_lift.png" alt="5. 슬로프 입장" data-rjs="2">
+                        <img src="images/step5_lift.png" width="84" height="100" alt="5. 슬로프 입장" data-rjs="2">
                         <h4><span>step 5</span>슬로프 입장</h4>
                         <div>
                             <p>리프트 탑승 전 초급자 리프트, 중급자 리프트, 상급자 리프트 확인 후 탑승해주세요.</p>     
-                            <a href="ski_slope.html#tabs-1" title="리프트 안내" class="short-cut">리프트 안내</a>
+                            <a href="ski_slope.html#tabs-1" class="short-cut">리프트 안내</a>
                         </div>
                     </div>                          
                 </div><!--progress_wrap-->             
@@ -343,7 +324,7 @@
                     <button title="리조트맵 닫기" class="close_btn">닫기</button>
                 </div>
                 <figure class="modal_img">
-                    <img src="https://res.cloudinary.com/suyeon/image/upload/v1649045519/images/resortmap_ippgai.jpg" alt="알프하우스, 스키& 9플러스 골프클럽(퍼블릭), 챌린지 하우스, 골프장, 검봉 국민의 숲(산책로), 스키하우스, 골프연습장, 클럽하우스, 엘스위트 콘도미니움, 야외수영장, 잔디운동장, 테마공원" title="리조트 맵 이미지">
+                    <img src="images/resortmap.jpg" width="771" height="396" alt="알프하우스, 스키& 9플러스 골프클럽(퍼블릭), 챌린지 하우스, 골프장, 검봉 국민의 숲(산책로), 스키하우스, 골프연습장, 클럽하우스, 엘스위트 콘도미니움, 야외수영장, 잔디운동장, 테마공원" title="리조트 맵 이미지" loading="lazy">
                 </figure>
             </div>
         </div><!--modal-->
@@ -364,14 +345,14 @@
             <h2 class="hidden">footer menu</h2>               
             <div class="container">
                 <ul>
-                    <li><a href="./index.html" title="개인정보처리방침">개인정보처리방침</a></li>
-                    <li><a href="./index.html" title="이메일무단수집거부">이메일무단수집거부</a></li>
-                    <li><a href="./index.html" title="행사문의">행사문의</a></li>
-                    <li><a href="./index.html" title="찾아오시는 길">찾아오시는 길</a></li>
-                    <li><a href="./index.html" title="제휴안내">제휴안내</a></li>
-                    <li><a href="./index.html" title="채용안내">채용안내</a></li>
-                    <li><a href="./index.html" title="윤리경영(사이버신문고)">윤리경영(사이버신문고)</a></li>
-                    <li><a href="./index.html" title="사이트맵">사이트맵</a></li>
+                    <li><a href="./index.html">개인정보처리방침</a></li>
+                    <li><a href="./index.html">이메일무단수집거부</a></li>
+                    <li><a href="./index.html">행사문의</a></li>
+                    <li><a href="./index.html">찾아오시는 길</a></li>
+                    <li><a href="./index.html">제휴안내</a></li>
+                    <li><a href="./index.html">채용안내</a></li>
+                    <li><a href="./index.html">윤리경영(사이버신문고)</a></li>
+                    <li><a href="./index.html">사이트맵</a></li>
                 </ul>
             </div>
         </section>     
@@ -400,7 +381,7 @@
         </section>
         <section class="add">
             <div class="container">
-                <h2 class="logo"><a href="https://www.gsenc.com/" title="GS건설">GS건설</a></h2>
+                <h2 class="logo"><a href="https://www.gsenc.com/">GS건설</a></h2>
                 <address>
                     <p>사업자등록번호 104-81-18121 통신판매업신고 2004-72 대표이사 임병용</p>
                     <p>개인정보관리책임자 : (강촌) 골프사업팀 송철호 팀장 (제주) 골프사업팀 김성용 팀장</p>
@@ -408,21 +389,28 @@
                     <p> copyrights 2017 by elysian. all rights reserved </p>
                 </address>
                 <div class="site_links">
-                    <select name="family_site" class="family_site">
+                    <label for="family_site" class="hidden">family site</label>
+                    <select name="family_site" id="family_site" class="family_site">
                         <option value="">FAMILY SITE</option>
                         <option value="http://www.elysianwed.co.kr">엘리시안 웨딩</option>
                         <option value="https://www.gsenc.com">GS건설</option>
                     </select>
                     <ul class="sns">
-                        <li><a href="https://twitter.com/elysian_elly" title="twitter" target="_blank" class="sprite twitter">twitter</a></li>
-                        <li><a href="https://www.facebook.com/elysianresort" title="facebook" target="_blank" class="sprite facebook">facebook</a></li>
-                        <li><a href="https://pf.kakao.com/_TRdcu" target="_blank" title="kakao" class="sprite kakao">kakao</a></li>
-                        <li><a href="https://www.instagram.com/elysianresort/" title="instagram" target="_blank" class="sprite instagram">instagram</a></li>
-                        <li><a href="https://www.youtube.com/channel/UCbebg_djPaDcySjaQlscXug" title="youtube" target="_blank" class="sprite youtube">youtube</a></li>
+                        <li><a href="https://twitter.com/elysian_elly" target="_blank" class="sprite twitter">twitter</a></li>
+                        <li><a href="https://www.facebook.com/elysianresort" target="_blank" class="sprite facebook">facebook</a></li>
+                        <li><a href="https://pf.kakao.com/_TRdcu" target="_blank" class="sprite kakao">kakao</a></li>
+                        <li><a href="https://www.instagram.com/elysianresort/" target="_blank" class="sprite instagram">instagram</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCbebg_djPaDcySjaQlscXug" target="_blank" class="sprite youtube">youtube</a></li>
                     </ul>
                 </div>
             </div>
         </section>
     </footer>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- retina js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/2.1.3/retina.min.js" integrity="sha512-9RcSZpXlWiAq12BM82QI0qRtusQJonuUZ/h/bZl+Cd6O4Pw7UnGV6gnCcS5wV03/zvLwCeL3enaUa0RPy+VM2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/common.js"></script>
+    <script src="js/ski.js"></script>
 </body>
 </html>

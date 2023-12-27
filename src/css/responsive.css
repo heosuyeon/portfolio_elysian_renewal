@@ -83,6 +83,10 @@
     .offers-wrap .img_caption p {
         font-size: 14px;
     }
+    /*------------------ski------------------*/
+    .grid {
+        margin: 0 1px;
+    }
     /*------------------ski_info------------------*/
     .progress_wrap {
         flex-wrap: wrap;
@@ -878,9 +882,11 @@
     }
     /*------------------ski------------------*/
     .main_bg_wrap {
-        background: url('../images/ski_main_bg_responsive.webp') no-repeat center center / cover;
+        height: 50vh;
+        /* background-image: url('../images/ski_main_bg_responsive.webp'); */
     }
     .ski_page .main_content_warp {
+        margin-top: 35px;
         width: 200px;
         line-height: 24px;
     }
