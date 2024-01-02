@@ -226,9 +226,6 @@
     text-align: center;
     box-sizing: border-box;
 }
-.gallery .readmore {
-    transform: translateY(0);
-}
 .dark .gallery {
     background: #333;
 }

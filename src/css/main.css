@@ -212,6 +212,11 @@
 .main_business >.container {
     position: relative;
 }
+.main_business .caption_up h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 .full_bg_wrap {
     position: absolute;
     left: 0;
