@@ -117,7 +117,7 @@ const watch = () => {
   gulp.watch(routes.js.watch, js);
 };
 
-const gh = () => gulp.src("build/**/*").pipe(ghPages());
+const gh = () => gulp.src("build/**/*").pipe(ghPages({ branch: "main" }));
 
 const prepare = gulp.series([clean, img]);
 
