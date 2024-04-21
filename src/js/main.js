@@ -14,6 +14,7 @@ $(function () {
     mycookie += "Expires=" + date.toUTCString();
     document.cookie = mycookie; //쿠키 설정, 생성
   } //setCookie
+
   //쿠키 삭제
   function delCookie(name) {
     var date = new Date();
@@ -23,6 +24,7 @@ $(function () {
     setCookie += "Expires=" + date.toUTCString();
     document.cookie = setCookie; //쿠키 설정, 생성
   } //delCookie
+
   //쿠키 확인
   function checkCookie(name) {
     var cookies = document.cookie.split(";");
@@ -196,7 +198,6 @@ $(function () {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
           dots: true,
           infinite: false,
         },
@@ -204,11 +205,10 @@ $(function () {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.05,
+          slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
           centerPadding: "40px",
-          centerPadding: 0,
           arrows: false,
           dots: true,
         },
@@ -246,61 +246,37 @@ $(function () {
   const newsSlidesItem = newsSlides.find("> .swiper-slide");
   const noResult = newsSlides.find("> .emptymessage");
 
-  newsSlides.slick({
+  $(".news_slides").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     infinite: false,
-    responsive: [
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: false,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 1,
+    //       infinite: false,
+    //       arrows: true,
+    //     },
+    //   },
+    // ],
   });
 
-  filterBtn.click(function (e) {
+  filterBtn.on("click", function (e) {
     e.preventDefault();
     $(this).addClass("active").siblings().removeClass("active"); //버튼 스타일
     let dataFilter = $(this).attr("data-filter");
 
-    newsSlides.slick("slickRemove", null, null, true);
-    newsSlides.slick("slickAdd", newsSlidesItem.filter(dataFilter));
+    // 슬라이드 전체 삭제
+    $(".news_slides").slick("slickRemove", null, null, true);
+
+    $(".news_slides").slick("slickAdd", newsSlidesItem.filter(dataFilter));
 
     if ($(".slick-track").children(".swiper-slide").length == 0) {
-      newsSlides.slick("slickAdd", noResult);
+      $(".news_slides").slick("slickAdd", noResult);
     }
-    // console.log($('.slick-track').children('.swiper-slide').length)
-
-    // if(dataFilter =='all'){
-    //   //전체 삭제하고 다시 넣어준 후에 전부 보여주기
-    //   $('.swiper-wrapper').slick('slickRemove',null, null, true);
-    //   // newsSlidesItem.remove();
-    //   // newsSlides.append(newsSlidesItem);
-    //   //newsSlidesItem.show(); //리스트 전체 보이기
-    // }else{
-    //   $('.swiper-wrapper').slick('slickRemove',null, null, true);
-    //   // newsSlidesItem.remove();
-    //   // newsSlides.append(newsSlidesItem.filter(dataFilter));
-    //   //$(dataFilter).show(); //선택한 리스트만 보이기
-    // }
-    // 슬라이드 업데이트후 위치 옮기기
-    // swiper.updateSlides();
-    // swiper.slideTo(0, 100, false);
-
-    // console.log('swiper.realIndex :', swiper.realIndex,'swiper.activeIndex :', swiper.activeIndex);
-    // console.log('swiper.slides.length :', swiper.slides.length);
-
-    //게시글 없음
-    // if(swiper.slides.length == 0) {
-    //   noResult.css({display:'block'});
-    // }else{
-    //   noResult.css({display:'none'});
-    // }
   });
   filterBtn.eq(0).trigger("click");
 
