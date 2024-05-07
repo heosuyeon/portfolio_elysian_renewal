@@ -4,6 +4,7 @@
   "repository": "https://github.com/heosuyeon/portfolio_elysian_renewal.git",
   "author": "heosuyeon <hsy121891@gmail.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
