@@ -47,3 +47,20 @@
 * [공지사항](https://heosuyeon.github.io/portfolio_elysian_renewal/news.html)
 * [로그인](https://heosuyeon.github.io/portfolio_elysian_renewal/signin.html)
 * [회원가입](https://heosuyeon.github.io/portfolio_elysian_renewal/signup.html)
+
+## 실행 방법
+1. 레포지토리 클론
+```
+git clone https://github.com/heosuyeon/portfolio_elysian_renewal.git
+cd portfolio_elysian_renewal
+```
+
+2. 패키지 설치
+```
+yarn
+```
+
+3. 개발 모드 실행
+```
+yarn dev
+```
